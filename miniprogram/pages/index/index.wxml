@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<navigator url="/pages/about/about" >
+  <view style="display:flex; justify-content:center; align-items:center;">
+    <image mode="widthFix" src="/pages/images/huihui.jpg" style= "width: 93%;">
+    </image>
+  </view>
+</navigator>
+
+<text> \n </text>
+
+<view class="catlist">
+
+<view class="catitem">
+  <view class="search">
+  <input placeholder="请输入猫咪名称" bindconfirm="bindconfirmT" auto-focus/>
+  </view>
+</view>
+</view>
+
+<view class="catlist">
+  <block wx:for="{{catlist}}">
+  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
+    <view class="catitem">
+        <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/{{item.name}}_circle.png" mode='aspectFill' ></image>
+        <view class= "cat-name">{{item.name}}</view> 
+      </view>
+    </navigator>
+  </block>
+</view>

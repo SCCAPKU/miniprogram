@@ -1,0 +1,25 @@
+<!--index.wxml-->
+
+<view class= "catname">北京大学流浪猫关爱协会</view>
+
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" src="/pages/images/huihui.jpg" style= "width: 93%;">
+  </image>
+</view>
+<text> \n </text>
+
+<view class="about">
+北京大学流浪猫关爱协会（简称“北大猫协”）自2006年成立，为北京大学团委指导下、由学生自发组织的非营利性志愿组织。
+</view>
+
+<view class="about">
+协会自成立后，一直致力于通过喂养、绝育、送养等和平手段，减少燕园流浪猫数量，改善校内现有流浪猫生活质量，协调人猫关系，构建和谐校园。
+</view>
+
+<view class="about">
+欢迎关注协会官方公众号“北大猫协”，了解更多校内流浪猫故事和协会信息~
+</view>
+
+<text> \n </text>
+
+<official-account></official-account>

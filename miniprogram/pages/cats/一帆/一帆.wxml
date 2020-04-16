@@ -1,0 +1,29 @@
+<!--index.wxml-->
+
+<view class= "catname">{{catname}}</view>
+
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" src="https://gitee.com/circlelq/cat_photos/raw/master/{{catname}}.jpg" style= "width: 93%;">
+  </image>
+</view>
+
+<text> \n </text>
+
+<view wx:for = "{{catitems}}" class = "itemname1">
+  {{item.category}}：
+  <view class = "itemname2">{{item.content}}
+  </view>
+</view>
+
+<text> \n </text>
+
+<block wx:for="{{nums}}">
+
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" src="https://gitee.com/circlelq/cat_photos/raw/master/{{catname}}{{item.num}}.jpg" style= "width: 93%;">
+  </image>
+</view>
+
+<text> \n </text>
+
+</block>

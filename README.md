@@ -29,3 +29,10 @@ circle 打算有空的时候做一个使用说明视频，如果光看这个 md 
 ## 我们的公众号
 
 ![640](640.jpeg)
+
+## 打赏图片和链接
+
+![donate](donate.jpeg)
+
+https://weidian.com/item.html?itemID=2742068017&ifr=pbj_item_3490&wfr=pbj_item_3490
+

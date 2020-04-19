@@ -19,7 +19,7 @@ catname:"土谦",
 {category:"第一次被目击时间",
  content:" 2018秋 ",},
 {category:"编写日期",
- content:" 2019-11-15",},
+ content:" 2020-04-19",},
 ], 
 nums:[
 ]},
@@ -33,7 +33,7 @@ nums:[
       console.log(res.target)
     }
     return {
-      path: '/pages/index/index?pageId='+this.data.catname,//这里在首页的地址后面添加我们需要传值的标识位pageId以及值123(pageId 这个名字你们可以自己随便乱取 如同一个变量名)
+      path: '/pages/index/index?pageId='+this.data.catname,
       success: function (res) {
         // 转发成功
       },

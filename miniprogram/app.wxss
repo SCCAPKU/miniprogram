@@ -26,7 +26,15 @@
   color:#626262;
   font-weight:normal;
   margin-right: 20rpx;
+}
 
+/**跳转到相关到喵**/
+.itemname3 {
+  font-size: 16px;
+  display:flex;
+  color:#3385c9;
+  font-weight:normal;
+  justify-content: flex-start;
 }
 
 .content {
@@ -46,11 +54,89 @@
 
 .about {
   font-size: 16px;
-  margin-left: 30rpx;
+  margin-left: 40rpx;
   margin-right: 30rpx;
+  line-height:25px;
   margin-bottom: 20rpx;
   margin-top: 20rpx;
   color:#626262;
-  text-indent: 32px;
   text-align: left;
+}
+
+
+/* 会徽 */
+.board image{
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px solid #eee;
+}
+
+
+/*每一只猫*/
+.catitem{
+  height: 3.7rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/*分割线样式*/
+.divLine{
+ background: #eee;
+ height: 1px;
+ margin-left: 5rem;
+}
+
+
+/*猫名称*/
+.cat-name{
+  font-size: 1rem;
+  flex-direction:row;
+  margin-left: 5rem;
+  color:black;
+  text-align: center;
+}
+
+/*搜索框*/
+.search{
+  font-size: 1rem;
+  align-items: center;
+  display:flex;
+  flex-direction:row;
+  margin-left: 5rem;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+  color:black;
+}
+
+.avator {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+  position: absolute;
+  align-items: center;
+  display:flex;
+}
+
+.copy{
+  color: #3385c9;
+}
+
+.play{
+ margin: 0;
+ width:60rpx;
+ height: 60rpx;
+ margin-right: 20rpx;
+ border: none;
+}
+
+.staff {
+  font-size: 12px;
+  margin-left: 40rpx;
+  margin-right: 30rpx;
+  line-height:25px;
+  margin-bottom: 0rpx;
+  margin-top: -10rpx;
+  color:#62626298;
+  text-align: right;
 }

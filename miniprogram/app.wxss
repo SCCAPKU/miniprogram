@@ -15,15 +15,15 @@
   margin-bottom: 10rpx;
   margin-top: 20rpx;
   display:flex;
-  color:#626262;
-  font-weight:bold;
+  color:#888888;
+  /* font-weight:bold; */
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .itemname2 {
   font-size: 16px;
-  color:#626262;
+  color:#353535;
   font-weight:normal;
   margin-right: 20rpx;
 }
@@ -59,7 +59,7 @@
   line-height:25px;
   margin-bottom: 20rpx;
   margin-top: 20rpx;
-  color:#626262;
+  color:#353535;
   text-align: left;
 }
 

@@ -3,7 +3,7 @@
 <view class= "catname">{{catname}}</view>
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" src="https://raw.githubusercontent.com/circlelq/cat_photos/master/{{catname}}.jpg" style= "width: 93%;">
+  <image mode="widthFix" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}.jpg" style= "width: 93%;">
   </image>
 </view>
 
@@ -15,7 +15,27 @@
   </view>
 </view>
 
-<view  class = "itemname1">
+<view wx:if="{{relationship[0]}}" class = "itemname1">
+  链接：
+<view class="itemname3">
+  <navigator  wx:for = "{{relationship}}" url="/pages/cats/{{item.rela}}/{{item.rela}}" >
+     <text space="emsp">{{item.rela}} </text>
+  </navigator>
+</view>
+</view>
+
+<text> \n </text>
+
+<block wx:for="{{nums}}">
+
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}{{item.num}}.jpg" style= "width: 93%;">
+  </image>
+</view>
+
+<text> \n </text>
+
+</block><view  class = "itemname1">
 
 某位小黄鸭铁粉的介绍：
 
@@ -29,7 +49,7 @@
 
 <view style="display:flex; justify-content:center; align-items:center;">
 
-  <image mode="widthFix" src="https://raw.githubusercontent.com/circlelq/cat_photos/master/{{catname}}1.jpg" style= "width: 93%;">
+  <image mode="widthFix" src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{catname}}{{item.num}}1.jpg" style= "width: 93%;">
 
   </image>
 

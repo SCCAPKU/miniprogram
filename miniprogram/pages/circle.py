@@ -65,6 +65,8 @@ labels = [
 	[12, '外貌', lambda x:x],
 	[13, '性格', lambda x: '亲人可抱' if x == 6 else '亲人不可抱 可摸' if x == 5 else '薛定谔亲人' if x == 4 else '吃东西时可以一直摸' if x == 3 else '吃东西时可以摸一下' if x == 2 else '怕人 安全距离1m以内' if x == 1 else '怕人 安全距离1m以外' if x == 0 else '未知 数据缺失' ],
 	[14, '第一次被目击时间', lambda x: str(x)],
+	[16, '关系', lambda x: str(x)],
+
 ]
 
 data_json = []
@@ -83,7 +85,15 @@ for i in range(rowNum):
 
 #创建猫文件夹
 if not os.path.exists('cats'):
-	os.makedirs('cats') 
+	os.makedirs('cats')
+
+# 用于搜索关系链接
+names = []
+for line in data_json:
+	if line['是否写入图鉴'] != '':
+		names.append(line['名字'])
+#print(names)
+
 
 for line in data_json:
 	if line['是否写入图鉴'] != '':
@@ -104,6 +114,12 @@ for line in data_json:
 			#编写日期
 			f.write('{category:"编写日期",\n content:" ' + today + '",},\n')
 			f.write( '], \n')
+			#增加关系跳转项
+			f.write('relationship:[')
+			for i in names:
+				if i in line['关系'] and i!=line['名字']:
+					f.write( '{ rela:"' + i + '"},\n')		
+			f.write( '], \n')			
 			f.write( 'nums:[\n')
 			for i in range(int(line['是否写入图鉴'])):
 				f.write( '{ ' + 'num: {} '.format(i+1) + '},\n')
@@ -115,12 +131,11 @@ for line in data_json:
 			with open('json.txt','r') as f2:
 				f.write(f2.read())
 		with open('cats/' + line['名字'] + '/' + line['名字'] + '.wxml', 'w') as f:
-			if line['名字'] == '小黄鸭':
-				with open('文案/小黄鸭.txt','r') as f2:
-					f.write(f2.read())
-				continue
 			with open('wxml.txt','r') as f2:
 				f.write(f2.read())
+				if line['名字'] == '小黄鸭':
+					with open('文案/小黄鸭.txt','r') as f2:
+						f.write(f2.read())
 				
 #编写index文件
 with open('index/' + 'index.js', 'w') as f:

@@ -15,6 +15,15 @@
   </view>
 </view>
 
+<view wx:if="{{relationship[0]}}" class = "itemname1">
+  链接：
+<view class="itemname3">
+  <navigator  wx:for = "{{relationship}}" url="/pages/cats/{{item.rela}}/{{item.rela}}" >
+     <text space="emsp">{{item.rela}} </text>
+  </navigator>
+</view>
+</view>
+
 <text> \n </text>
 
 <block wx:for="{{nums}}">

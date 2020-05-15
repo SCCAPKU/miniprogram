@@ -62,13 +62,17 @@ App({
       }
     })
   },
+
   globalData: {
     userInfo: null
   },
+  
 
 })
 
 wx.showShareMenu({
   withShareTicket: true
 })
+
+wx.setInnerAudioOption({ obeyMuteSwitch: false });
 

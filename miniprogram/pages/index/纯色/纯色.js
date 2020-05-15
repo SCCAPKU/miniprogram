@@ -1,4 +1,7 @@
-
+Page({
+data: { 
+ catlist: [
+{ name:"薏米"},
     ],
     screenWidth: 0,
     screenHeight: 0,
@@ -13,6 +16,7 @@
   //转发跳转页面设置
   onLoad: function (options) {
     if (options.pageId) {
+      //这个pageId的值存在则证明首页的开启来源于用户点击来首页,同时可以通过获取到的pageId的值跳转导航到对应的详情页
       wx.navigateTo({
         url: '/pages/cats/' + options.pageId + '/' + options.pageId,
       })
@@ -42,6 +46,7 @@
   bindconfirmT: function (e) {
     console.log("e.detail.value");
     if(e.detail.value) {
+    //这个pageId的值存在则证明首页的开启来源于用户点击来首页,同时可以通过获取到的pageId的值跳转导航到对应的详情页
     wx.navigateTo({
       url: '/pages/cats/' + e.detail.value + '/' + e.detail.value,
     })

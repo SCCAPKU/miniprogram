@@ -1,47 +1,74 @@
-<!--index.wxml-->
-
-<view class= "catname">{{catname}}</view>
-
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}.jpg" style= "width: 93%;">
+  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}.jpg" style= "width: 90%;">
   </image>
 </view>
 
-<text> \n </text>
 
-<view wx:for = "{{catitems}}" class = "itemname1">
-  {{item.category}}：
-  <view class = "itemname2">{{item.content}}
+
+<view class = "itemname1">
+  <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+    <view class= "cat-card">{{catname}}</view>
+  </view>
+  <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+    <!-- 猫叫声 -->
+<view class="sound">
+<block wx:for="{{audioArr}}" wx:key="content" wx:for-item="v" wx:for-index="key">
+  
+  <!-- 默认状态 未播放 -->
+  <view  wx:if="{{!v.bl}}" bindtap='audioPlay' data-key="{{key}}" data-id="{{v.id}}" data-bl="{{v.bl}}">
+    <image class = "play" src="/pages/images/play.png"  ></image>    
+  </view>
+
+  <!-- 当前正在播放状态 -->
+  <view wx:if="{{v.bl}}" bindtap='audioStop' data-key="{{key}}"  data-id="{{v.id}}" data-bl="{{v.bl}}">
+    <image class = "play" src="/pages/images/pause.png" ></image>    
+  </view>
+
+</block>
+</view>
   </view>
 </view>
 
+
+<view class = "itemname1">
+<view wx:for = "{{catitems}}">
+  <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+    {{item.category}}
+  </view>
+  <view class = "itemname2">{{item.content}}</view>
+</view>
+</view>
+
 <view wx:if="{{relationship[0]}}" class = "itemname1">
-  链接：
-<view class="itemname3">
   <navigator  wx:for = "{{relationship}}" url="/pages/cats/{{item.rela}}/{{item.rela}}" >
-     <text space="emsp">{{item.rela}} </text>
+  <view style='flex-shrink:0; box-sizing:border-box; width:3rem; margin-right:1rem;'>
+    <image style="width:3rem;height:3rem;" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{item.rela}}_circle.png" ></image>
+    <view style="text-align: center;  color:#353535;" > \n {{item.rela}} </view>  
+  </view>
   </navigator>
 </view>
-</view>
+
+
 
 <text> \n </text>
 
 <block wx:for="{{nums}}">
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}{{item.num}}.jpg" style= "width: 93%;">
+  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}{{item.num}}.jpg" style= "width: 90%;">
   </image>
 </view>
 
 <text> \n </text>
 
-</block><view  class = "itemname1">
+</block>
+<view  class = "itemname1">
 
 某位小黄鸭铁粉的介绍：
 
 </view>
 
-<view class = "about">
+<view class = "body">
 
 小黄鸭幼年时是个野孩子。他虽然和微草一家生活在一起，但经常被当作外来的弟弟欺负，摸爬滚打中也练就了一手猫猫拳。尽管脾气凶悍，因为他天真无邪的盛世童颜（有协会流传的歪头杀美照作证），前来撸他的两脚兽络绎不绝，刚喂完食就被他送去打疫苗的也络绎不绝。
 
@@ -49,7 +76,7 @@
 
 <view style="display:flex; justify-content:center; align-items:center;">
 
-  <image mode="widthFix" src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{catname}}{{item.num}}1.jpg" style= "width: 93%;">
+  <image mode="widthFix" class="cat_image" src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{catname}}{{item.num}}1.jpg" style= "width: 93%;">
 
   </image>
 
@@ -57,7 +84,7 @@
 
 
 
-<view class = "about">
+<view class = "body">
 
 小黄鸭的转变在土谦突然亲人之后。可能是他胖了，在无数的美食贿赂（和两脚兽的血泪）中想通了亲人的妙处，可能是难兄难弟你亲我也亲的家族情，也可能是被盘得太多了，终于小黄鸭这个熊孩子也想开了。解锁了亲人属性又凭着（胖了也有的）美貌，小黄鸭一时成了畅蠢之后的燕南园明星猫。
 
@@ -65,7 +92,7 @@
 
 
 
-<view class = "about">
+<view class = "body">
 
 不过，小黄鸭的送养最终因为熊孩子属性爆发而凉掉。可能鸭鸭还是喜欢在燕南园自由地翻墙、和兄弟姐妹们追逐打闹，也享受着对两脚兽的呼来喝去。你好看就听你的吧，本小黄鸭铁粉绝不认输！
 

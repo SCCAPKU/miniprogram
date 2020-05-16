@@ -105,7 +105,7 @@ for line in data_json:
 		if not os.path.exists('cats/'+ line['名字']):
 			os.makedirs('cats/'+ line['名字'])# 创建每只猫的文件夹
 		# 创建js文件
-		with open('cats/' + line['名字'] + '/' + line['名字'] + '.js', 'w') as f:
+		with open('cats/' + line['名字'] + '/' + line['名字'] + '.js', 'w', encoding='utf-8') as f:
 			f.write( 'Page({ \n data: {\n' 'catname:"' +line['名字'] + '",\n catitems:[ \n')
 			for j in labels:
 				# 打印名字，需要复制到index.js文件中
@@ -140,18 +140,18 @@ for line in data_json:
 				f.write("],\n  audKey: '', \n},\n")
 			else:
 				f.write('},')
-			with open('js.txt','r') as f2:
+			with open('js.txt','r', encoding='utf-8') as f2:
 				f.write(f2.read())
 			
 		# 补充另外两个文件
-		with open('cats/' + line['名字'] + '/' + line['名字'] + '.json', 'w') as f:
-			with open('json.txt','r') as f2:
+		with open('cats/' + line['名字'] + '/' + line['名字'] + '.json', 'w', encoding='utf-8') as f:
+			with open('json.txt','r', encoding='utf-8') as f2:
 				f.write(f2.read())
-		with open('cats/' + line['名字'] + '/' + line['名字'] + '.wxml', 'w') as f:
-			with open('wxml.txt','r') as f2:
+		with open('cats/' + line['名字'] + '/' + line['名字'] + '.wxml', 'w', encoding='utf-8') as f:
+			with open('wxml.txt','r', encoding='utf-8') as f2:
 				f.write(f2.read())
 				if line['名字'] == '小黄鸭':
-					with open('文案/小黄鸭.txt','r') as f2:
+					with open('文案/小黄鸭.txt','r', encoding='utf-8') as f2:
 						f.write(f2.read())
 
 
@@ -205,70 +205,70 @@ dead = sorted(dead, key=lambda student: student[1], reverse=True)
 if not os.path.exists('index/奶牛'):
 	os.makedirs('index/'+ '奶牛')# 创建每只猫的文件夹
 		# 创建js文件
-with open('index/奶牛/奶牛' + '.js', 'w') as f:
+with open('index/奶牛/奶牛' + '.js', 'w', encoding='utf-8') as f:
 	f.write( 'Page({\ndata: { \n catlist: [\n')
 	for name in nainiu:
 		f.write('{ name:"'+name+'"},')
-	with open('js2.txt','r') as f2:
+	with open('js2.txt','r', encoding='utf-8') as f2:
 		f.write(f2.read())
 
 # 狸花
 if not os.path.exists('index/狸花'):
 	os.makedirs('index/'+ '狸花')# 创建每只猫的文件夹
 		# 创建js文件
-with open('index/狸花/狸花' + '.js', 'w') as f:
+with open('index/狸花/狸花' + '.js', 'w', encoding='utf-8') as f:
 	f.write( 'Page({\ndata: { \n catlist: [\n')
 	for name in lihua:
 		f.write('{ name:"'+name+'"},')
-	with open('js2.txt','r') as f2:
+	with open('js2.txt','r', encoding='utf-8') as f2:
 		f.write(f2.read())
 
 # 玳瑁及三花
 if not os.path.exists('index/玳瑁及三花'):
 	os.makedirs('index/'+ '玳瑁及三花')# 创建每只猫的文件夹
 		# 创建js文件
-with open('index/玳瑁及三花/玳瑁及三花' + '.js', 'w') as f:
+with open('index/玳瑁及三花/玳瑁及三花' + '.js', 'w', encoding='utf-8') as f:
 	f.write( 'Page({\ndata: { \n catlist: [\n')
 	for name in sanhua:
 		f.write('{ name:"'+name+'"},')
-	with open('js2.txt','r') as f2:
+	with open('js2.txt','r', encoding='utf-8') as f2:
 		f.write(f2.read())
 
 # 纯色
 if not os.path.exists('index/纯色'):
 	os.makedirs('index/'+ '纯色')# 创建每只猫的文件夹
 		# 创建js文件
-with open('index/纯色/纯色' + '.js', 'w') as f:
+with open('index/纯色/纯色' + '.js', 'w', encoding='utf-8') as f:
 	f.write( 'Page({\ndata: { \n catlist: [\n')
 	for name in chunse:
 		f.write('{ name:"'+name+'"},')
-	with open('js2.txt','r') as f2:
+	with open('js2.txt','r', encoding='utf-8') as f2:
 		f.write(f2.read())
 
 # 橘猫及橘白
 if not os.path.exists('index/橘猫及橘白'):
 	os.makedirs('index/'+ '橘猫及橘白')# 创建每只猫的文件夹
 		# 创建js文件
-with open('index/橘猫及橘白/橘猫及橘白' + '.js', 'w') as f:
+with open('index/橘猫及橘白/橘猫及橘白' + '.js', 'w', encoding='utf-8') as f:
 	f.write( 'Page({\ndata: { \n catlist: [\n')
 	for name in ju:
 		f.write('{ name:"'+name+'"},')
-	with open('js2.txt','r') as f2:
+	with open('js2.txt','r', encoding='utf-8') as f2:
 		f.write(f2.read())
 
 # 所有
 if not os.path.exists('index/所有'):
 	os.makedirs('index/'+ '所有')# 创建每只猫的文件夹
 		# 创建js文件
-with open('index/所有/所有' + '.js', 'w') as f:
+with open('index/所有/所有' + '.js', 'w', encoding='utf-8') as f:
 	f.write( 'Page({\ndata: { \n catlist: [\n')
 	for name in suoyou:
 		f.write('{ name:"'+name+'"},')
-	with open('js2.txt','r') as f2:
+	with open('js2.txt','r', encoding='utf-8') as f2:
 		f.write(f2.read())
 
 # 创建状态分类的js文件
-with open('index/index' + '.js', 'w') as f:
+with open('index/index' + '.js', 'w', encoding='utf-8') as f:
 	f.write( 'Page({\ndata: { \n')
 	#  fostered
 	f.write( ' fostered_catlist: [\n')
@@ -285,7 +285,7 @@ with open('index/index' + '.js', 'w') as f:
 	for name in dead:
 		f.write('{ name:"'+name[0]+'"},\n')
 	f.write( '],\n')		
-	with open('js_index.txt','r') as f2:
+	with open('js_index.txt','r', encoding='utf-8') as f2:
 		f.write(f2.read())
 
 

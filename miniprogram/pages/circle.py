@@ -108,9 +108,9 @@ for line in data_json:
 		with open('cats/' + line['名字'] + '/' + line['名字'] + '.js', 'w', encoding='utf-8') as f:
 			f.write( 'Page({ \n data: {\n' 'catname:"' +line['名字'] + '",\n catitems:[ \n')
 			for j in labels:
-				# 打印名字，需要复制到index.js文件中
+				# 打印名字
 				if j[1] == '名字':
-					# print('{ name:"'+str(line[j[1]])+'"},')
+					print(str(line[j[1]]))
 					continue
 				if j[0] == 23:
 					continue

@@ -1,0 +1,165 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.itemname1 {
+  font-size: 27rpx;
+  margin-left: 40rpx;
+  margin-bottom: 30rpx;
+  margin-top: 30rpx;
+  display:flex;
+  color:#888888;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.itemname2 {
+  font-size: 30rpx;
+  color:#353535;
+  font-weight:normal;
+  margin-right: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 45rpx;
+  text-align: center;
+  margin-top: 14rpx;
+  margin-bottom: 14rpx;
+  font-weight:bold;
+}
+
+.head1 {
+  font-size: 35rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  line-height:25rpx;
+  margin-bottom: 20rpx;
+  margin-top: 40rpx;
+  font-weight:bold;
+  color:black;
+  text-align: left;
+}
+
+.body {
+  font-size: 30rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  margin-bottom: 30rpx;
+  margin-top: 14rpx;
+  color:#353535;
+  letter-spacing: 5rpx;
+  line-height: 55rpx;
+  text-align: justify;
+}
+
+
+
+.bodybold {
+  font-weight:bold;
+}
+
+/* 会徽 */
+.board image{
+  width: 100%;
+  height: 300rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+
+/*每一只猫*/
+.catitem{
+  height: 3.7rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/*分割线样式*/
+.divLine{
+ background: #eee;
+ height: 3rpx;
+ margin-left: 5rem;
+}
+
+
+/*猫名称*/
+.cat-name{
+  font-size: 30rpx;
+  flex-direction:row;
+  margin-left: 5rem;
+  color:#353535;
+  text-align: center;
+}
+
+/*搜索框*/
+.search{
+  font-size: 30rpx;
+  position: absolute;
+  margin-left: 5rem;
+  margin-top: 0.7rem;
+}
+
+.avator {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 40rpx;
+  position: absolute;
+  align-items: center;
+  display:flex;
+}
+
+.copy{
+  color: #576b95;
+}
+
+.play{
+ width:45rpx;
+ height: 45rpx;
+ margin-right: 20rpx;
+}
+
+.staff {
+  font-size: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  line-height:45rpx;
+  margin-bottom: 0rpx;
+  margin-top: -10rpx;
+  color:#888888;
+  text-align: right;
+}
+
+.cat_image {
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.cat-card {
+  font-size: 45rpx;
+  color:black; 
+  font-weight:bold;
+  justify-content: flex-start;
+}
+
+.sound {
+  margin-top: 9rpx;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

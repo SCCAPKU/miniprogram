@@ -1,0 +1,37 @@
+<view  class = "itemname1">
+
+某位小黄鸭铁粉的介绍：
+
+</view>
+
+<view class = "body">
+
+小黄鸭幼年时是个野孩子。他虽然和微草一家生活在一起，但经常被当作外来的弟弟欺负，摸爬滚打中也练就了一手猫猫拳。尽管脾气凶悍，因为他天真无邪的盛世童颜（有协会流传的歪头杀美照作证），前来撸他的两脚兽络绎不绝，刚喂完食就被他送去打疫苗的也络绎不绝。
+
+</view>
+
+<view style="display:flex; justify-content:center; align-items:center;">
+
+  <image mode="widthFix" class="cat_image" src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{catname}}{{item.num}}1.jpg" style= "width: 93%;">
+
+  </image>
+
+</view>
+
+
+
+<view class = "body">
+
+小黄鸭的转变在土谦突然亲人之后。可能是他胖了，在无数的美食贿赂（和两脚兽的血泪）中想通了亲人的妙处，可能是难兄难弟你亲我也亲的家族情，也可能是被盘得太多了，终于小黄鸭这个熊孩子也想开了。解锁了亲人属性又凭着（胖了也有的）美貌，小黄鸭一时成了畅蠢之后的燕南园明星猫。
+
+</view>
+
+
+
+<view class = "body">
+
+不过，小黄鸭的送养最终因为熊孩子属性爆发而凉掉。可能鸭鸭还是喜欢在燕南园自由地翻墙、和兄弟姐妹们追逐打闹，也享受着对两脚兽的呼来喝去。你好看就听你的吧，本小黄鸭铁粉绝不认输！
+
+</view>
+
+<text> \n </text>

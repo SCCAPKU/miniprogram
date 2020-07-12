@@ -1,0 +1,142 @@
+<!--index.wxml-->
+
+<image  class = 'avator ' src="/pages/images/huihui_circle.png" mode='aspectFill' ></image>
+<view class="search">
+<input placeholder="请输入猫咪名称" bindconfirm="bindconfirmT" placeholder-class="placeholder" />
+</view>
+
+<text> \n\n\n </text>
+
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+
+<!-- 在校 -->
+<view hidden="{{currentTab!==0}}">
+
+
+<text> \n </text>
+
+<navigator url="/pages/index/玳瑁及三花/玳瑁及三花" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/花灵灵_circle.png" mode='aspectFill' ></image>
+    <view class="cat-name">三花和玳瑁</view> 
+  </view>
+</navigator>
+
+<view class="divLine"></view>
+
+<navigator url="/pages/index/橘猫及橘白/橘猫及橘白" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/畅蠢_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">橘猫和橘白</view>
+  </view>
+</navigator>
+
+<view class="divLine"></view>
+
+<navigator url="/pages/index/纯色/纯色" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/薏米_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">纯色</view>
+  </view>
+</navigator>
+
+
+<view class="divLine"></view>
+
+<navigator url="/pages/index/奶牛/奶牛" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/英杰_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">奶牛</view>
+  </view>
+</navigator>
+
+<view class="divLine"></view>
+
+<navigator url="/pages/index/狸花/狸花" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/山竹_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">狸花</view>
+  </view>
+</navigator>
+
+<view class="divLine"></view>
+
+<navigator url="/pages/index/所有/所有" >
+  <view class="catitem">
+    <image  class = 'avator ' src="/pages/images/huihui_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">所有</view>
+  </view>
+</navigator>
+
+<view class="divLine"></view>
+
+<text> \n </text>
+
+<view class = "body">若您在校内偶遇流浪猫，<text class = "bodybold">切记</text>人类的食物<text class = "bodybold">不要</text>喂给流浪猫！
+</view>
+<view class = "body">
+🚫<text class = "bodybold">巧克力、葡萄制品、大葱、洋葱</text>等食品对猫<text class = "bodybold">有毒</text>，可能会引起急性肾衰竭，切<text class = "bodybold">不可以</text>喂食！
+</view>
+<view class = "body">
+🚫<text class = "bodybold">火腿肠</text>和<text class = "bodybold">牛奶</text>也并<text class = "bodybold">不适合</text>猫咪，会引起肠胃反应，造成腹泻等状况。
+</view>
+<view class = "body">
+🚫酸性的各类水果、香辛料制的肉类、乌贼等海产也<text class = "bodybold">均不适合</text>猫咪食用。
+</view>
+<view class = "body">
+猫常见的较合适的食物有猫粮、猫罐头、以及其它一些猫咪零食。
+</view>
+
+</view>
+ 
+<!-- 毕业 -->
+
+<text> \n </text>
+
+<view hidden="{{currentTab!==1}}">
+  <block wx:for="{{fostered_catlist}}">
+  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
+    <view class="catitem">
+      <image  class = 'avator ' lazy-load src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <view class= "cat-name">{{item.name}}</view> 
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+  
+</block>
+</view>
+
+<!-- 休学 -->
+
+<view hidden="{{currentTab!==2}}">
+    <block wx:for="{{unknown_catlist}}">
+  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
+    <view class="catitem">
+      <image  class = 'avator ' lazy-load src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <view class= "cat-name">{{item.name}}</view> 
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+  
+</block>
+</view>
+
+<!-- 喵星 -->
+
+<view hidden="{{currentTab!==3}}">
+    <block wx:for="{{dead_catlist}}">
+  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
+    <view class="catitem">
+      <image  class = 'avator ' lazy-load src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <view class= "cat-name">{{item.name}}</view> 
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+  
+</block>
+</view>

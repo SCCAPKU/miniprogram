@@ -1,0 +1,64 @@
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}.jpg" style= "width: 90%;">
+  </image>
+</view>
+
+
+
+<view class = "itemname1">
+  <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+    <view class= "cat-card">{{catname}}</view>
+  </view>
+  <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+    <!-- 猫叫声 -->
+<view class="sound">
+<block wx:for="{{audioArr}}" wx:key="content" wx:for-item="v" wx:for-index="key">
+  
+  <!-- 默认状态 未播放 -->
+  <view  wx:if="{{!v.bl}}" bindtap='audioPlay' data-key="{{key}}" data-id="{{v.id}}" data-bl="{{v.bl}}">
+    <image class = "play" src="/pages/images/play.png"  ></image>    
+  </view>
+
+  <!-- 当前正在播放状态 -->
+  <view wx:if="{{v.bl}}" bindtap='audioStop' data-key="{{key}}"  data-id="{{v.id}}" data-bl="{{v.bl}}">
+    <image class = "play" src="/pages/images/pause.png" ></image>    
+  </view>
+
+</block>
+</view>
+  </view>
+</view>
+
+
+<view class = "itemname1">
+<view wx:for = "{{catitems}}">
+  <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+    {{item.category}}
+  </view>
+  <view class = "itemname2">{{item.content}}</view>
+</view>
+</view>
+
+<view wx:if="{{relationship[0]}}" class = "itemname1">
+  <navigator  wx:for = "{{relationship}}" url="/pages/cats/{{item.rela}}/{{item.rela}}" >
+  <view style='flex-shrink:0; box-sizing:border-box; width:3rem; margin-right:1rem;'>
+    <image style="width:3rem;height:3rem;" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{item.rela}}_circle.png" ></image>
+    <view style="text-align: center;  color:#353535;" > \n {{item.rela}} </view>  
+  </view>
+  </navigator>
+</view>
+
+
+
+<text> \n </text>
+
+<block wx:for="{{nums}}">
+
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}{{item.num}}.jpg" style= "width: 90%;">
+  </image>
+</view>
+
+<text> \n </text>
+
+</block>

@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/logs/logs",
+    "pages/science/science"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "北大猫咪图鉴",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor":"#94070a",
+    "color": "#888888",
+    "list": [
+      {
+        "text": "查猫",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "科普",
+        "pagePath": "pages/science/science"
+      },
+      {
+        "text": "关于",
+        "pagePath": "pages/about/about"
+      }
+    ]
+  }
+
+}

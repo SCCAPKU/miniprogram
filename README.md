@@ -28,9 +28,4 @@
 
 ![640](640.jpeg)
 
-### 打赏图片和链接
-
-![donate](donate.jpeg)
-
-https://weidian.com/item.html?itemID=2742068017&ifr=pbj_item_3490&wfr=pbj_item_3490
-
+关注公众号后提供捐赠途径。

@@ -10,7 +10,7 @@
 
 其实整体来说使用非常简单，主要是填写 Excel 表格并保存，然后运行一下 python 代码就行，不需要写任何小程序的代码。使用说明见  https://github.com/SCCAPKU/miniprogram/wiki/小程序教程
 
-小程序视频教程： https://b23.tv/BV16i4y1t7au
+小程序视频教程： https://www.bilibili.com/video/BV1jk4y1B7sX
 
 ## 关于我们
 

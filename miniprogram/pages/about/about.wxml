@@ -10,38 +10,9 @@
 
 <text> \n </text>
 
-<view class="body">
-北京大学学生流浪猫关爱协会（简称“北大猫协”）自 2006 年成立，为北京大学团委指导下、由学生自发组织的非营利性志愿组织。
-</view>
+<!-- 最好能保留这一行 -->
+<view class="body">此小程序所有代码开源，可在 GitHub 上搜索「北大猫协」，配有教学视频，简单易用。 </view>
 
-<view class="body">
-北大猫协致力于科学改善校园内现有流浪猫生活，用送养、绝育等方法和平减少燕园流浪猫数量，协调人猫关系，营造良好的校园环境。 猫协成立十余年来，除每日喂猫、伤病猫救助外，绝育和送养工作也一直在进行，目前北大生活教学区已知流浪猫绝育率已超过 90%，已送养猫数 400~500 只。</view>
-
-
-<!--<web-view src="https://mp.weixin.qq.com/s/TIuxaXIpwyMR_6JRfU9fPw"> </web-view>-->
-<!-- <official-account></official-account> -->
-
-
-<view class="body">
-流浪不是猫的归宿，北大也不是流浪猫的天堂。尽管同学们努力照料，由于车祸、伤病、犬咬等原因，北大校内的流浪猫仍然经常离我们而去，这是流浪生活的常态，其中一些故事可以在【<text bindtap="copyTBL" class="copy">北大猫协</text>】公众号后台回复【日光】查看。点击最上方会徽可以查看小程序介绍推送，点击推送中的【<text bindtap="copyTBL" class="copy">北大猫协</text>】可关注我们的公众号，公众号会提供捐赠方式。
-</view>
-
-<view class="body">
-
-若无救助管理，人类遗弃所致的流浪动物对城市生态环境具有一定的负面影响。为了我们共同的家园，请大家不在任何地方遗弃宠物，支持科学救助，用领养代替购买。
-</view>
-
-
-
-<!-- <text bindtap="saveImage" class="copy">北大猫协</text> -->
-
-
-
-<!-- <view class="body">
-<navigator url="/pages/donate/donate" >
-<text class="copy">打赏链接</text>
-</navigator>
-</view> -->
 
 <text> \n </text>
 
@@ -51,14 +22,6 @@
 小程序开发：circle
 </view>
 
-<view class="staff">
-猫咪资料统计：橙子じん等</view>
-
-<view class="staff">
-供图：doradog、水云烟华等
-</view>
-
 
 <text> \n </text>
 
-<!-- <button open-type='feedback' type='primary'>意见反馈</button> -->

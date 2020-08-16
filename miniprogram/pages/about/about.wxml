@@ -16,10 +16,17 @@
 
 <text> \n </text>
 
-<view class="staff">2020-05-08</view>
+<view class="staff">2020-08-16</view>
 
 <view class="staff">
 小程序开发：circle
+</view>
+
+<view  class = "itemname1">
+  <view bindtap="naviToMini" style='flex-shrink:0; box-sizing:border-box; width:3rem; margin-right:1rem;'>
+    <image style="width:3rem;height:3rem;" src="/pages/images/circle.png" ></image>
+    <view style="text-align: center;  color:#353535;" > \n 高校动保索引 </view>  
+  </view>
 </view>
 
 

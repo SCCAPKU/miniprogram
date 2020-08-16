@@ -59,7 +59,7 @@ labels = [
 	[3, '是否写入图鉴', lambda x:x],
 	[4, '昵称', lambda x:x],
 	[5, '毛色', lambda x:x],
-	
+	# [7, '出没地点', lambda x: str(x)],
 	[8, '性别', lambda x:'公' if x == 1 else '母' if x == 0 else '未知'],
 	[9, '状况', lambda x:'不明' if len(x) < 1 else x],
 	[10, '绝育情况', lambda x:'已绝育' if x == 1 else '未绝育' if x == 0 else '未知/可能不适宜绝育'],
@@ -135,7 +135,7 @@ for line in data_json:
 				audio = '//pku-lostangel.oss-cn-beijing.aliyuncs.com/' + line['名字']
 				audio = urllib.parse.quote(audio)
 				f.write('audioArr: [\n')
-				for i in range(line['是否加音频']):
+				for i in range(int(line['是否加音频'])):
 					f.write( '{\n ' + "src: 'https:" + audio + "{}.m4a'".format(i+1) + ',\nbl: false\n},\n')
 				f.write("],\n  audKey: '', \n},\n")
 			else:

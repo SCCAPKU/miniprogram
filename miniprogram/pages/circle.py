@@ -131,14 +131,14 @@ for line in data_json:
             f.write('],\n')
             #  音频数
             if line['是否加音频']:
-                audio = 'https://pku-lostangel.oss-cn-beijing.aliyuncs.com/' + \
+                audio = '//pku-lostangel.oss-cn-beijing.aliyuncs.com/' + \
                     line['名字']
                 audio = urllib.parse.quote(audio)
                 f.write('audioArr: [\n')
                 for i in range(int(line['是否加音频'])):
                     f.write('{\n ' + "src: '" + audio +
                             "{}.m4a'".format(i+1) + ',\nbl: false\n},\n')
-                f.write("],\n  audKey: '', \n},\n")
+                f.write("],\n  audKey: 'https:', \n},\n")
             else:
                 f.write('},')
             with open('js.txt', 'r', encoding='utf-8') as f2:

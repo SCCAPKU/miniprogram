@@ -103,7 +103,7 @@ for line in data_json:
             os.makedirs('cats/' + line['名字'])  # 创建每只猫的文件夹
         # 创建js文件
         with open('cats/' + line['名字'] + '/' + line['名字'] + '.js', 'w', encoding='utf-8') as f:
-            f.write('Page({ \n data: {\n' 'catname:"' +
+            f.write('var app = getApp()\n Page({ \n data: {\n' 'catname:"' +
                     line['名字'] + '",\n catitems:[ \n')
             for j in labels:
                 # 打印名字
@@ -117,7 +117,7 @@ for line in data_json:
                 # print(j[1] + " " + str(line[j[1]]))
                 f.write(
                     '{category:"' + j[1] + '",\n content:" ' + str(line[j[1]]) + '",},\n')
-            f.write('\n], \n')
+            f.write('\n], \nurl: app.globalData.url,\n')
             # 增加关系跳转项
             f.write('relationship:[')
             for i in names:
@@ -131,12 +131,12 @@ for line in data_json:
             f.write('],\n')
             #  音频数
             if line['是否加音频']:
-                audio = '//pku-lostangel.oss-cn-beijing.aliyuncs.com/' + \
+                audio = 'https://pku-lostangel.oss-cn-beijing.aliyuncs.com/' + \
                     line['名字']
                 audio = urllib.parse.quote(audio)
                 f.write('audioArr: [\n')
                 for i in range(int(line['是否加音频'])):
-                    f.write('{\n ' + "src: 'https:" + audio +
+                    f.write('{\n ' + "src: '" + audio +
                             "{}.m4a'".format(i+1) + ',\nbl: false\n},\n')
                 f.write("],\n  audKey: '', \n},\n")
             else:
@@ -206,7 +206,7 @@ if not os.path.exists('index/奶牛'):
     os.makedirs('index/' + '奶牛')  # 创建每只猫的文件夹
     # 创建js文件
 with open('index/奶牛/奶牛' + '.js', 'w', encoding='utf-8') as f:
-    f.write('Page({\ndata: { \n catlist: [\n')
+    f.write('var app = getApp()\n Page({\ndata: { \n catlist: [\n')
     for name in nainiu:
         f.write('{ name:"'+name+'"},')
     with open('js2.txt', 'r', encoding='utf-8') as f2:
@@ -217,7 +217,7 @@ if not os.path.exists('index/狸花'):
     os.makedirs('index/' + '狸花')  # 创建每只猫的文件夹
     # 创建js文件
 with open('index/狸花/狸花' + '.js', 'w', encoding='utf-8') as f:
-    f.write('Page({\ndata: { \n catlist: [\n')
+    f.write('var app = getApp()\n Page({\ndata: { \n catlist: [\n')
     for name in lihua:
         f.write('{ name:"'+name+'"},')
     with open('js2.txt', 'r', encoding='utf-8') as f2:
@@ -228,7 +228,7 @@ if not os.path.exists('index/玳瑁及三花'):
     os.makedirs('index/' + '玳瑁及三花')  # 创建每只猫的文件夹
     # 创建js文件
 with open('index/玳瑁及三花/玳瑁及三花' + '.js', 'w', encoding='utf-8') as f:
-    f.write('Page({\ndata: { \n catlist: [\n')
+    f.write('var app = getApp()\n Page({\ndata: { \n catlist: [\n')
     for name in sanhua:
         f.write('{ name:"'+name+'"},')
     with open('js2.txt', 'r', encoding='utf-8') as f2:
@@ -239,7 +239,7 @@ if not os.path.exists('index/纯色'):
     os.makedirs('index/' + '纯色')  # 创建每只猫的文件夹
     # 创建js文件
 with open('index/纯色/纯色' + '.js', 'w', encoding='utf-8') as f:
-    f.write('Page({\ndata: { \n catlist: [\n')
+    f.write('var app = getApp()\n Page({\ndata: { \n catlist: [\n')
     for name in chunse:
         f.write('{ name:"'+name+'"},')
     with open('js2.txt', 'r', encoding='utf-8') as f2:
@@ -250,7 +250,7 @@ if not os.path.exists('index/橘猫及橘白'):
     os.makedirs('index/' + '橘猫及橘白')  # 创建每只猫的文件夹
     # 创建js文件
 with open('index/橘猫及橘白/橘猫及橘白' + '.js', 'w', encoding='utf-8') as f:
-    f.write('Page({\ndata: { \n catlist: [\n')
+    f.write('var app = getApp()\n Page({\ndata: { \n catlist: [\n')
     for name in ju:
         f.write('{ name:"'+name+'"},')
     with open('js2.txt', 'r', encoding='utf-8') as f2:
@@ -261,7 +261,7 @@ if not os.path.exists('index/所有'):
     os.makedirs('index/' + '所有')  # 创建每只猫的文件夹
     # 创建js文件
 with open('index/所有/所有' + '.js', 'w', encoding='utf-8') as f:
-    f.write('Page({\ndata: { \n catlist: [\n')
+    f.write('var app = getApp()\n Page({\ndata: { \n catlist: [\n')
     for name in suoyou:
         f.write('{ name:"'+name+'"},')
     with open('js2.txt', 'r', encoding='utf-8') as f2:
@@ -269,7 +269,7 @@ with open('index/所有/所有' + '.js', 'w', encoding='utf-8') as f:
 
 # 创建状态分类的js文件
 with open('index/index' + '.js', 'w', encoding='utf-8') as f:
-    f.write('Page({\ndata: { \n')
+    f.write('var app = getApp()\n Page({\ndata: { \n')
     #  fostered
     f.write(' fostered_catlist: [\n')
     for name in fostered:

@@ -1,4 +1,5 @@
-Page({
+var app = getApp()
+ Page({
 data: { 
  catlist: [
 { name:"薏米"},
@@ -6,7 +7,8 @@ data: {
     screenWidth: 0,
     screenHeight: 0,
     imgwidth: 0,
-    imgheight: 0
+    imgheight: 0,
+    url: app.globalData.url,
   },
 
   onPullDownRefresh:function(){

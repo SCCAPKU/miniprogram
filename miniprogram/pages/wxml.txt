@@ -1,5 +1,5 @@
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}.jpg" style= "width: 90%;">
+  <image mode="widthFix" class="cat_image" src="{{url}}{{catname}}.jpg" style= "width: 90%;">
   </image>
 </view>
 
@@ -42,7 +42,7 @@
 <view wx:if="{{relationship[0]}}" class = "itemname1">
   <navigator  wx:for = "{{relationship}}" url="/pages/cats/{{item.rela}}/{{item.rela}}" >
   <view style='flex-shrink:0; box-sizing:border-box; width:3rem; margin-right:1rem;'>
-    <image style="width:3rem;height:3rem;" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{item.rela}}_circle.png" ></image>
+    <image style="width:3rem;height:3rem;" src="{{url}}{{item.rela}}_circle.png" ></image>
     <view style="text-align: center;  color:#353535;" > \n {{item.rela}} </view>  
   </view>
   </navigator>
@@ -55,7 +55,7 @@
 <block wx:for="{{nums}}">
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}{{item.num}}.jpg" style= "width: 90%;">
+  <image mode="widthFix" class="cat_image" src="{{url}}{{catname}}{{item.num}}.jpg" style= "width: 90%;">
   </image>
 </view>
 

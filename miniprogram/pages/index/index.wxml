@@ -1,6 +1,6 @@
 <!--index.wxml-->
 
-<image  class = 'avator ' src="/pages/images/huihui_circle.png" mode='aspectFill' ></image>
+<image  class = 'avator ' src="/pages/images/huihui.png" mode='aspectFill' ></image>
 <view class="search">
 <input placeholder="请输入猫咪名称" bindconfirm="bindconfirmT" placeholder-class="placeholder" />
 </view>
@@ -19,7 +19,7 @@
 
 <navigator url="/pages/index/玳瑁及三花/玳瑁及三花" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/花灵灵_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="{{url}}花灵灵.png" mode='aspectFill' ></image>
     <view class="cat-name">三花和玳瑁</view> 
   </view>
 </navigator>
@@ -28,7 +28,7 @@
 
 <navigator url="/pages/index/橘猫及橘白/橘猫及橘白" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/畅蠢_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="{{url}}畅蠢.png" mode='aspectFill' ></image>
     <view class= "cat-name">橘猫和橘白</view>
   </view>
 </navigator>
@@ -37,7 +37,7 @@
 
 <navigator url="/pages/index/纯色/纯色" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/薏米_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="{{url}}薏米.png" mode='aspectFill' ></image>
     <view class= "cat-name">纯色</view>
   </view>
 </navigator>
@@ -47,7 +47,7 @@
 
 <navigator url="/pages/index/奶牛/奶牛" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/英杰_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="{{url}}英杰.png" mode='aspectFill' ></image>
     <view class= "cat-name">奶牛</view>
   </view>
 </navigator>
@@ -56,7 +56,7 @@
 
 <navigator url="/pages/index/狸花/狸花" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/山竹_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="{{url}}山竹.png" mode='aspectFill' ></image>
     <view class= "cat-name">狸花</view>
   </view>
 </navigator>
@@ -65,7 +65,7 @@
 
 <navigator url="/pages/index/所有/所有" >
   <view class="catitem">
-    <image  class = 'avator ' src="/pages/images/huihui_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="/pages/images/huihui.png" mode='aspectFill' ></image>
     <view class= "cat-name">所有</view>
   </view>
 </navigator>
@@ -99,7 +99,7 @@
   <block wx:for="{{fostered_catlist}}">
   <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
     <view class="catitem">
-      <image  class = 'avator ' lazy-load src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <image  class = 'avator ' lazy-load src="{{url}}{{item.name}}.png" mode='aspectFill' ></image>
       <view class= "cat-name">{{item.name}}</view> 
     </view>
   </navigator>
@@ -115,7 +115,7 @@
     <block wx:for="{{unknown_catlist}}">
   <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
     <view class="catitem">
-      <image  class = 'avator ' lazy-load src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <image  class = 'avator ' lazy-load src="{{url}}{{item.name}}.png" mode='aspectFill' ></image>
       <view class= "cat-name">{{item.name}}</view> 
     </view>
   </navigator>
@@ -131,7 +131,7 @@
     <block wx:for="{{dead_catlist}}">
   <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
     <view class="catitem">
-      <image  class = 'avator ' lazy-load src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <image  class = 'avator ' lazy-load src="{{url}}{{item.name}}.png" mode='aspectFill' ></image>
       <view class= "cat-name">{{item.name}}</view> 
     </view>
   </navigator>

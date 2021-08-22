@@ -64,7 +64,8 @@ App({
   },
 
   globalData: {
-    userInfo: null
+    userInfo: null,
+    url: "https://pku-lostangel.oss-cn-beijing.aliyuncs.com/",
   },
   
 

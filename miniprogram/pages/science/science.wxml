@@ -4,6 +4,11 @@
 
 <view hidden="{{currentTab!==0}}">
 
+  <view class="head1">标题 </view>
+
+  <view class="body">主体内容。注意class里的变量。 </view>
+
+
 </view>
 
 <view hidden="{{currentTab!==1}}">

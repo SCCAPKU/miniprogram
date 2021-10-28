@@ -12,6 +12,13 @@
 
 小程序视频教程： https://www.bilibili.com/video/BV16b4y1S7PN
 
+## 版本
+
+一般情况下点击上方的下载代码即可。下面是其它的版本。
+
+- 没有分类的简化版本 https://github.com/SCCAPKU/miniprogram/releases/tag/1.0
+- 添加了狗狗分类的版本 https://github.com/SCCAPKU/miniprogram/releases/tag/1.1
+
 ## 关于我们
 
 > 因为网络问题，图片可能加载不出来。可以复制名字后在微信里搜索。

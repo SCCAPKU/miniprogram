@@ -197,13 +197,13 @@ suoyou = health
 try:
     fostered = sorted(fostered, key=lambda student: student[1], reverse=True)
 except:
-    print("请严格按照格式填写时间：2000年01月01日")
+    print("请严格按照格式填写送养时间：2000年01月01日")
 
 # 调整离世的时间顺序
 try:
     dead = sorted(dead, key=lambda student: student[1], reverse=True)
 except:
-    print("请严格按照格式填写时间：2000年01月01日")
+    print("请严格按照格式填写离世时间：2000年01月01日")
 
 # 创建毛色分类的js文件
 # 奶牛

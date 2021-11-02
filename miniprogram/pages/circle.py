@@ -41,9 +41,9 @@ rowNum -= 12
 """
 
 for i in range(rowNum):
-	for j in range(colNum):
-		print(data_list[i][j], ' ',end="")
-	print('\n')
+    for j in range(colNum):
+        print(data_list[i][j], ' ',end="")
+    print('\n')
 
 """
 
@@ -194,11 +194,16 @@ health = lihua + ju + nainiu + sanhua + chunse
 suoyou = health
 
 # 调整寄养的时间顺序
-fostered = sorted(fostered, key=lambda student: student[1], reverse=True)
+try:
+    fostered = sorted(fostered, key=lambda student: student[1], reverse=True)
+except:
+    print("请严格按照格式填写时间：2000年01月01日")
 
 # 调整离世的时间顺序
-dead = sorted(dead, key=lambda student: student[1], reverse=True)
-
+try:
+    dead = sorted(dead, key=lambda student: student[1], reverse=True)
+except:
+    print("请严格按照格式填写时间：2000年01月01日")
 
 # 创建毛色分类的js文件
 # 奶牛

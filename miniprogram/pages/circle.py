@@ -68,7 +68,8 @@ labels = [
     [13, '外貌', lambda x:x],
     [18, '更多', lambda x:x],
     [17, '关系', lambda x: str(x)],
-    [23, '是否加音频', lambda x:x]
+    [23, '是否加音频', lambda x:x],
+    [24, '是否加视频', lambda x:x]
 ]
 
 data_json = []
@@ -129,6 +130,12 @@ for line in data_json:
             for i in range(int(line['是否写入图鉴'])):
                 f.write('{ ' + 'num: {} '.format(i+1) + '},\n')
             f.write('],\n')
+            #  后面的视频数
+            if line['是否加视频']:
+                f.write('MovieNums:[\n')
+                for i in range(int(line['是否加视频'])):
+                    f.write('{ ' + 'num: {} '.format(i+1) + '},\n')
+                f.write('],\n')
             #  音频数
             if line['是否加音频']:
                 audio = '//pku-lostangel.oss-cn-beijing.aliyuncs.com/' + \

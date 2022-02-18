@@ -97,6 +97,9 @@ for line in data_json:
         names.append(line['名字'])
 # print(names)
 
+with open('../app.json', 'w', encoding='utf-8') as f:
+    f.write('{\n  "pages": [ \n    "pages/index/index",\n')  # 创建 app.json 文件
+
 
 for line in data_json:
     if line['是否写入图鉴'] != '':
@@ -142,10 +145,10 @@ for line in data_json:
                     line['名字']
                 audio = urllib.parse.quote(audio)
                 f.write('audioArr: [\n')
-                for i in range(int(line['是否加音频'])):
-                    f.write('{\n ' + "src: '" + audio +
+                for i in range(line['是否加音频']):
+                    f.write('{\n ' + "src: 'https:" + audio +
                             "{}.m4a'".format(i+1) + ',\nbl: false\n},\n')
-                f.write("],\n  audKey: 'https:', \n},\n")
+                f.write("],\n  audKey: '', \n},\n")
             else:
                 f.write('},')
             with open('js.txt', 'r', encoding='utf-8') as f2:
@@ -161,6 +164,17 @@ for line in data_json:
                 if line['名字'] == '小黄鸭':
                     with open('文案/小黄鸭.txt', 'r', encoding='utf-8') as f2:
                         f.write(f2.read())
+
+        # 补充 app.json
+        with open('../app.json', 'a', encoding='utf-8') as f:  # 补充 app.json 文件
+            f.write('    "pages/cats/' +
+                    line['名字'] + '/' + line['名字'] + '",\n')
+
+
+# 填写 app.json 文件
+with open('../app.json', 'a', encoding='utf-8') as f:  # 补充 app.json 文件
+    with open('appjson.txt', 'r', encoding='utf-8') as f2:
+        f.write(f2.read())
 
 
 # 几个分页的index内容（显示哪些猫）

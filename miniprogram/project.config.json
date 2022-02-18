@@ -30,17 +30,21 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "useIsolateContext": false,
+    "useIsolateContext": true,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
     "minifyWXSS": true,
-    "showES6CompileOption": false
+    "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.8.1",
   "appid": "wx176cdf19e4cadaaf",
-  "projectname": "%E7%8C%AB%E5%8D%8F",
+  "projectname": "miniprogram",
   "debugOptions": {
     "hidedInDevtools": []
   },

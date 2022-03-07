@@ -1,5 +1,3 @@
-<!--index.wxml-->
-
 <block wx:for="{{catlist}}">
   <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
     <view class="catitem">

@@ -7,6 +7,7 @@
     "pages/cats/土谦/土谦",
     "pages/cats/小黄鸭/小黄鸭",
     "pages/cats/薏米/薏米",
+    "pages/cats/杜若/杜若",
     
     "pages/about/about",
     "pages/logs/logs",
@@ -16,7 +17,8 @@
     "pages/index/纯色/纯色",
     "pages/index/奶牛/奶牛",
     "pages/index/狸花/狸花",
-    "pages/index/所有/所有"
+    "pages/index/所有/所有",
+    "pages/index/狗子/狗子"
   ],
   "window": {
     "backgroundTextStyle": "light",

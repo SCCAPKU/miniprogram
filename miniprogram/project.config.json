@@ -5,8 +5,8 @@
   },
   "setting": {
     "urlCheck": true,
-    "es6": false,
-    "enhance": true,
+    "es6": true,
+    "enhance": false,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
@@ -43,14 +43,14 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.8.1",
-  "appid": "wx176cdf19e4cadaaf",
-  "projectname": "miniprogram",
+  "projectname": "miniprogram-2",
   "debugOptions": {
     "hidedInDevtools": []
   },
   "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
+  "appid": "wx176cdf19e4cadaaf",
   "condition": {
     "search": {
       "list": []

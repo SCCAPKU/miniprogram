@@ -1,5 +1,5 @@
 var app = getApp()
- Page({
+Page({
 data: { 
  fostered_catlist: [
 { name:"杰希"},

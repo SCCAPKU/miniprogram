@@ -1,5 +1,5 @@
 var app = getApp()
- Page({
+Page({
 data: { 
  catlist: [
 { name:"英杰"},{ name:"一帆"},

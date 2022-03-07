@@ -7,7 +7,8 @@
     "pages/index/纯色/纯色",
     "pages/index/奶牛/奶牛",
     "pages/index/狸花/狸花",
-    "pages/index/所有/所有"
+    "pages/index/所有/所有",
+    "pages/index/狗子/狗子"
   ],
   "window": {
     "backgroundTextStyle": "light",

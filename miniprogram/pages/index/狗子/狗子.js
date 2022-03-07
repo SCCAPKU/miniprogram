@@ -2,7 +2,7 @@ var app = getApp()
 Page({
 data: { 
  catlist: [
-{ name:"薏米"},
+{ name:"杜若"},
     ],
     screenWidth: 0,
     screenHeight: 0,

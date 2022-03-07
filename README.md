@@ -17,7 +17,7 @@
 一般情况下点击上方的下载代码即可。下面是其它的版本。
 
 - 没有分类的简化版本 https://github.com/SCCAPKU/miniprogram/releases/tag/1.0
-- 添加了狗狗分类的版本 https://github.com/SCCAPKU/miniprogram/releases/tag/1.1
+- 添加了狗狗分类的版本 https://github.com/SCCAPKU/miniprogram/tree/dog
 
 ## 关于我们
 

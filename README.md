@@ -1,6 +1,6 @@
 # miniprogram
 
-已发布的方便使用的版本：[GitHub - circlelq/miniprogram: 北大猫协小程序](https://github.com/circlelq/miniprogram)
+已发布的方便使用的版本：[北大猫咪图鉴-燕园猫速查手册](https://github.com/circlelq/yan-yuan-mao-su-cha-shou-ce)
 
 ## 注意事项
 

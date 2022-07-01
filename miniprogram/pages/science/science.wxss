@@ -14,6 +14,7 @@ page{
   text-align: center;
   line-height: 80rpx;
   color: #888888;
+  font-size: 32rpx;
 }
 .navbar .item.active{
   color: #94070a;

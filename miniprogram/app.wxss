@@ -64,7 +64,7 @@
   margin-top: 14rpx;
   color:#353535;
   letter-spacing: 5rpx;
-  line-height: 55rpx;
+  line-height: 50rpx;
   text-align: justify;
 }
 
@@ -84,7 +84,7 @@
 
 /*每一只猫*/
 .catitem{
-  height: 3.7rem;
+  height: 100rpx;
   display: flex;
   align-items: center;
   width: 100%;
@@ -94,30 +94,35 @@
 .divLine{
  background: #eee;
  height: 3rpx;
- margin-left: 5rem;
+ margin-left: 150rpx;
 }
 
-
+.divLine1{
+  background: #eee;
+  height: 3rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+ }
 /*猫名称*/
 .cat-name{
-  font-size: 30rpx;
+  font-size: 32rpx;
   flex-direction:row;
-  margin-left: 5rem;
+  margin-left: 150rpx;
   color:#353535;
   text-align: center;
 }
 
 /*搜索框*/
 .search{
-  font-size: 30rpx;
+  font-size: 32rpx;
   position: absolute;
-  margin-left: 5rem;
-  margin-top: 0.7rem;
+  margin-left: 150rpx;
+  margin-top: 25rpx;
 }
 
 .avator {
-  width: 3rem;
-  height: 3rem;
+  width: 90rpx;
+  height: 90rpx;
   margin-left: 40rpx;
   position: absolute;
   align-items: center;
@@ -140,7 +145,7 @@
   margin-right: 40rpx;
   line-height:45rpx;
   margin-bottom: 0rpx;
-  margin-top: -10rpx;
+  margin-top: -5rpx;
   color:#888888;
   text-align: right;
 }
@@ -162,14 +167,4 @@
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.adContainer {
-  width:100%;
-  display: flex;
-  justify-content: center;
-}
-
-.adContainer ad {
-  width:100%;
 }

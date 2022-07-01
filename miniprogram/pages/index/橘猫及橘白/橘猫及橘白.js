@@ -2,13 +2,12 @@ var app = getApp()
  Page({
 data: { 
  catlist: [
-{ name:"小黄鸭"},
+{ name:"大盘鸡"},{ name:"砂糖橘"},{ name:"姜丝鸭"},{ name:"大哥"},{ name:"小尾巴"},{ name:"唢呐"},{ name:"咸蛋黄"},{ name:"小橘子"},{ name:"黄大孙女"},{ name:"冬笋"},{ name:"杜若"},{ name:"虾球"},{ name:"夕云"},{ name:"虾滑"},{ name:"二姐夫"},{ name:"二姐"},{ name:"五哥"},{ name:"小美"},{ name:"左智"},{ name:"路易"},{ name:"夕照"},{ name:"鸡翅"},{ name:"黄小孙女"},{ name:"鸡米花"},{ name:"凤爪"},{ name:"金桂"},{ name:"奶油鸡"},{ name:"黄连"},{ name:"鸡柳"},
     ],
     screenWidth: 0,
     screenHeight: 0,
     imgwidth: 0,
-    imgheight: 0,
-    url: app.globalData.url,
+    imgheight: 0
   },
 
   onPullDownRefresh:function(){
@@ -18,7 +17,6 @@ data: {
   //转发跳转页面设置
   onLoad: function (options) {
     if (options.pageId) {
-      
       wx.navigateTo({
         url: '/pages/cats/' + options.pageId + '/' + options.pageId,
       })
@@ -47,14 +45,11 @@ data: {
   // 搜索栏输入名字后页面跳转
   bindconfirmT: function (e) {
     console.log("e.detail.value");
-    if(e.detail.value) {
-    
+    if(e.detail.value) 
     wx.navigateTo({
       url: '/pages/cats/' + e.detail.value + '/' + e.detail.value,
     })
   }
   }
-
-
-})
+)
 

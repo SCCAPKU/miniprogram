@@ -12,7 +12,7 @@ import openpyxl
 today = time.strftime("%Y-%m-%d", time.localtime())
 
 
-workbook = openpyxl.load_workbook('猫咪档案.xlsx')
+workbook = openpyxl.load_workbook('../../../猫咪档案.xlsx')
 
 data = workbook.active
 
@@ -30,8 +30,6 @@ for i in range(12, rowNum):
             cell = ''
         rowlist.append(cell)
     data_list.append(rowlist)
-
-# print(data_list)
 
 
 #  输出所有单元格的内容
@@ -53,23 +51,23 @@ labels = [
     [3, '是否写入图鉴', lambda x:x],
     [4, '昵称', lambda x:x],
     [5, '毛色', lambda x:x],
-    # [7, '出没地点', lambda x: str(x)],
+
     [8, '性别', lambda x:'公' if x == 1 else '母' if x == 0 else '未知'],
-    [9, '状况', lambda x:'不明' if len(x) < 1 else x],
+    [9, '状况', lambda x:x],
     [10, '绝育情况', lambda x:'已绝育' if x ==
      1 else '未绝育' if x == 0 else '未知/可能不适宜绝育'],
     [11, '绝育时间', lambda x:str(x)],
     [12, '出生时间', lambda x:x],
     [14, '性格', lambda x: '亲人可抱' if x == 6 else '亲人不可抱 可摸' if x == 5 else '薛定谔亲人' if x == 4 else '吃东西时可以一直摸' if x ==
-        3 else '吃东西时可以摸一下' if x == 2 else '怕人 安全距离 1m 以内' if x == 1 else '怕人 安全距离 1m 以外' if x == 0 else '未知 数据缺失'],
+     3 else '吃东西时可以摸一下' if x == 2 else '怕人 安全距离 1m 以内' if x == 1 else '怕人 安全距离 1m 以外' if x == 0 else '未知 数据缺失'],
     [15, '第一次目击', lambda x: str(x)],
+    [25, '失踪时间', lambda x:str(x)],
     [20, '送养时间', lambda x:str(x)],
     [21, '离世时间', lambda x:x],
     [13, '外貌', lambda x:x],
-    [18, '更多', lambda x:x],
+    [24, '更多', lambda x:x],
     [17, '关系', lambda x: str(x)],
-    [23, '是否加音频', lambda x:x],
-    [24, '是否加视频', lambda x:x]
+    [23, '是否加音频', lambda x:x]
 ]
 
 data_json = []
@@ -114,7 +112,7 @@ for line in data_json:
                 if j[1] == '名字':
                     print(str(line[j[1]]))
                     continue
-                if j[0] == 23:
+                if j[0] == 23 or j[0] == 24:
                     continue
                 if str(line[j[1]]) == '' or j[1] == '是否写入图鉴':
                     continue
@@ -134,11 +132,11 @@ for line in data_json:
                 f.write('{ ' + 'num: {} '.format(i+1) + '},\n')
             f.write('],\n')
             #  后面的视频数
-            if line['是否加视频']:
-                f.write('MovieNums:[\n')
-                for i in range(int(line['是否加视频'])):
-                    f.write('{ ' + 'num: {} '.format(i+1) + '},\n')
-                f.write('],\n')
+            # if line['是否加视频']:
+            #     f.write('MovieNums:[\n')
+            #     for i in range(int(line['是否加视频'])):
+            #         f.write('{ ' + 'num: {} '.format(i+1) + '},\n')
+            #     f.write('],\n')
             #  音频数
             if line['是否加音频']:
                 audio = '//pku-lostangel.oss-cn-beijing.aliyuncs.com/' + \

@@ -2,13 +2,12 @@ var app = getApp()
  Page({
 data: { 
  catlist: [
-{ name:"薏米"},
+{ name:"薏米"},{ name:"棉花糖"},{ name:"小钒"},{ name:"藕黑"},{ name:"茶叶蛋"},{ name:"雪风"},{ name:"深雪"},{ name:"朝雾"},{ name:"迷雾"},{ name:"八二"},{ name:"于连"},
     ],
     screenWidth: 0,
     screenHeight: 0,
     imgwidth: 0,
-    imgheight: 0,
-    url: app.globalData.url,
+    imgheight: 0
   },
 
   onPullDownRefresh:function(){
@@ -18,7 +17,6 @@ data: {
   //转发跳转页面设置
   onLoad: function (options) {
     if (options.pageId) {
-      
       wx.navigateTo({
         url: '/pages/cats/' + options.pageId + '/' + options.pageId,
       })
@@ -47,14 +45,11 @@ data: {
   // 搜索栏输入名字后页面跳转
   bindconfirmT: function (e) {
     console.log("e.detail.value");
-    if(e.detail.value) {
-    
+    if(e.detail.value) 
     wx.navigateTo({
       url: '/pages/cats/' + e.detail.value + '/' + e.detail.value,
     })
   }
   }
-
-
-})
+)
 

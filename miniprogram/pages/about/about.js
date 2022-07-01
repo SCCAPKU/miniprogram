@@ -62,8 +62,8 @@ Page({
     })
     },
     codeimgdata: {
-      images:"https://pku-lostangel.oss-cn-beijing.aliyuncs.com/二维码.jpg",
-      imgList:["https://pku-lostangel.oss-cn-beijing.aliyuncs.com/二维码.jpg"]
+      images:"cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/二维码.jpg",
+      imgList:["cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/二维码.jpg"]
     },
     previewImg:function(e){
       console.log(1);

@@ -2,12 +2,13 @@ var app = getApp()
  Page({
 data: { 
  catlist: [
-{ name:"英杰"},{ name:"一帆"},{ name:"墨方"},{ name:"墨可"},{ name:"墨斜"},{ name:"仙草"},{ name:"太郎"},{ name:"琉青"},{ name:"莫可"},
+{ name:"英杰"},{ name:"一帆"},{ name:"二哈"},{ name:"大奶牛"},{ name:"墨方"},{ name:"墨可"},{ name:"墨斜"},{ name:"仙草"},{ name:"太郎"},{ name:"琉青"},{ name:"英仙"},
     ],
     screenWidth: 0,
     screenHeight: 0,
     imgwidth: 0,
-    imgheight: 0
+    imgheight: 0,
+    url: app.globalData.url,
   },
 
   onPullDownRefresh:function(){
@@ -17,6 +18,7 @@ data: {
   //转发跳转页面设置
   onLoad: function (options) {
     if (options.pageId) {
+      
       wx.navigateTo({
         url: '/pages/cats/' + options.pageId + '/' + options.pageId,
       })
@@ -45,11 +47,14 @@ data: {
   // 搜索栏输入名字后页面跳转
   bindconfirmT: function (e) {
     console.log("e.detail.value");
-    if(e.detail.value) 
+    if(e.detail.value) {
+    
     wx.navigateTo({
       url: '/pages/cats/' + e.detail.value + '/' + e.detail.value,
     })
   }
   }
-)
+
+
+})
 

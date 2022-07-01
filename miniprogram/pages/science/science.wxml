@@ -7,7 +7,7 @@
 <text> \n </text>
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/喂食.jpg" style= "width: 90%;">
+  <image mode="widthFix" class="cat_image" src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/喂食.jpg" style= "width: 90%;">
   </image>
 </view>
 
@@ -69,7 +69,7 @@
 <text> \n </text>
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/疾病.jpg" style= "width: 90%;">
+  <image mode="widthFix" class="cat_image" src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/疾病.jpg" style= "width: 90%;">
   </image>
 </view>
 
@@ -178,7 +178,7 @@
 <text> \n </text>
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/领养.jpg" style= "width: 90%;">
+  <image mode="widthFix" class="cat_image" src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/领养.jpg" style= "width: 90%;">
   </image>
 </view>
 
@@ -272,7 +272,7 @@ o	不定期接受微信照片/视频<text class = "bodybold">回访</text>
 <text> \n </text>
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/绝育.jpg" style= "width: 90%;">
+  <image mode="widthFix" class="cat_image" src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/绝育.jpg" style= "width: 90%;">
   </image>
 </view>
 
@@ -304,7 +304,7 @@ o	不定期接受微信照片/视频<text class = "bodybold">回访</text>
 <text> \n </text>
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/撸猫.jpg" style= "width: 90%;">
+  <image mode="widthFix" class="cat_image" src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/撸猫.jpg" style= "width: 90%;">
   </image>
 </view>
 

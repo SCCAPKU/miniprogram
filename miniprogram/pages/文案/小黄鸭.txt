@@ -12,7 +12,7 @@
 
 <view style="display:flex; justify-content:center; align-items:center;">
 
-  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}{{item.num}}1.jpg" style= "width: 93%;">
+  <image mode="widthFix" class="cat_image" src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/{{catname}}{{item.num}}1.jpg" style= "width: 93%;">
 
   </image>
 

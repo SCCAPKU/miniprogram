@@ -39,7 +39,7 @@ App({
 
   globalData: {
     userInfo: null,
-    url: "https://pku-lostangel.oss-cn-beijing.aliyuncs.com/",
+    url: "cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/",
   },
 
 

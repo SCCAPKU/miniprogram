@@ -31,7 +31,7 @@
 <view class="head1">联系我们</view>
 
 <view style="display:flex; justify-content:center; align-items:center;" bindtap="previewImg">
-  <image mode="widthFix" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/二维码.jpg" style= "width: 93%;">
+  <image mode="widthFix" src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/二维码.jpg" style= "width: 93%;">
   </image>
 </view>
 

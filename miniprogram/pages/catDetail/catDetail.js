@@ -1,81 +1,142 @@
-//index.js
-
-var cat_id = "1";
+var _id = "1";
+const app = getApp();
 
 Page({
   data: {
     cat: {},
-    markers: [],
-    photoscr: "",
+    url: app.globalData.url,
+    relatedCatsId: [],
+    photoArray: [],
+    audioArr: []
   },
 
-  /**
- * 生命周期函数--监听页面加载
- */
   onLoad: function (options) {
-    cat_id = options.cat_id;
-    const that = this;
-    console.log("加载detail页码");
-    // console.log(cat_id);
-    const db = wx.cloud.database();
-    db.collection('cat').doc(cat_id).get().then(res => {
-      console.log(res);
-
+    _id = options._id;
+    app.mpServerless.db.collection('SCCAPKU').find({
+      _id: _id,
+    }, {}).then(res => {
       this.setData({
-        cat: res.data,
-        photoscr: "https://6369-circle-test-zdk23-1259206269.tcb.qcloud.la/%E4%BC%9A%E5%BE%BD/" + res.data.name + ".png"
+        cat: res.result[0],
       });
     }).then(res => {
-      var number = 0
-      for (var i in this.data.cat.markers) {
-        var marker = [
-          {
-            iconPath: "https://6369-circle-test-zdk23-1259206269.tcb.qcloud.la/%E4%BC%9A%E5%BE%BD/" + encodeURIComponent(this.data.cat.name) + ".png",
-            latitude: this.data.cat.markers[i].latitude,
-            longitude: this.data.cat.markers[i].longitude,
-            width: 50,
-            height: 50,
-            id: number,
+      if (this.data.cat.addPhotoNumber > 0) {
+        for (var photoNum = 1; photoNum <= this.data.cat.addPhotoNumber; ++photoNum) {
+          this.setData({
+            photoArray: this.data.photoArray.concat(photoNum),
+          });
+        }
+      }
+      if (this.data.cat.audioNumber > 0) {
+        console.log(encodeURIComponent(this.data.cat.name))
+        for (var audioNum = 1; audioNum <= this.data.cat.audioNumber; ++audioNum) {
+          var audioTemp = {
+            bl: false,
+            src: this.data.url + encodeURIComponent(this.data.cat.name) + audioNum.toString() + ".m4a"
           }
-        ]
+          this.setData({
+            audioArr: this.data.audioArr.concat(audioTemp),
+          });
+        }
+      }
+      if (this.data.cat.relatedCats) {
+        var relatedCats = this.data.cat.relatedCats.split(" ")
+        for (var i = 0; i < relatedCats.length; ++i) {
+          app.mpServerless.db.collection('SCCAPKU').find({
+            name: relatedCats[i],
+          }, {}).then(res => {
+            this.setData({
+              relatedCatsId: this.data.relatedCatsId.concat(res.result),
+            });
+          })
+        }
         this.setData({
-          markers: this.data.markers.concat(marker),
+          relatedCats: relatedCats,
         });
-        // console.log(this.data.markers)
-        number++
-      }
-    });
-
-  },
-
-  includePointsOne() {
-    const mapCtx = wx.createMapContext('map', this);
-    mapCtx.includePoints({
-      padding: [60, 36, 0, 36],
-      points: this.data.markers,
-      success: res => {
-        console.log('includePoints success');
-      },
-      fail: err => {
-        console.log('includePoints fail', err);
       }
     });
   },
 
+  //音频播放  
+  audioPlay(e) {
+    var that = this,
+      id = e.currentTarget.dataset.id,
+      key = e.currentTarget.dataset.key,
+      audioArr = that.data.audioArr;
 
-  onShow: function (options) {
+    //设置状态
+    audioArr.forEach((v, i, array) => {
+      v.bl = false;
+      if (i == key) {
+        v.bl = true;
+      }
+    })
+    that.setData({
+      audioArr: audioArr,
+      audKey: key,
+    })
+
+    myaudio.autoplay = true;
+    var audKey = that.data.audKey,
+      vidSrc = audioArr[audKey].src;
+    myaudio.src = vidSrc;
+
+    myaudio.play();
+
+    //开始监听
+    myaudio.onPlay(() => {
+      console.log('开始播放');
+    })
+
+    //结束监听
+    myaudio.onEnded(() => {
+      console.log('自动播放完毕');
+      audioArr[key].bl = false;
+      that.setData({
+        audioArr: audioArr,
+      })
+    })
+
+    //错误回调
+    myaudio.onError((err) => {
+      console.log(err);
+      audioArr[key].bl = false;
+      that.setData({
+        audioArr: audioArr,
+      })
+      return
+    })
 
   },
 
+  // 音频停止
+  audioStop(e) {
+    var that = this,
+      key = e.currentTarget.dataset.key,
+      audioArr = that.data.audioArr;
+    //设置状态
+    audioArr.forEach((v, i, array) => {
+      v.bl = false;
+    })
+    that.setData({
+      audioArr: audioArr
+    })
 
-  regionchange(e) {
-    console.log(e.type)
+    myaudio.stop();
+
+    //停止监听
+    myaudio.onStop(() => {
+      console.log('停止播放');
+    })
   },
-  markertap(e) {
-    console.log(e.detail.markerId)
-  },
-  controltap(e) {
-    console.log(e.detail.controlId)
+
+
+  previewImage: function (e) {
+    let that = this;
+    let src = e.currentTarget.dataset.src;
+    wx.previewImage({
+      current: src,
+      urls: [src]
+    })
   },
 
   onShareAppMessage: function (res) {
@@ -85,7 +146,7 @@ Page({
     }
     return {
       title: this.data.cat.name,
-      path: '/pages/catDetail/catDetail?cat_id=' + this.data.cat._id,
+      path: '/pages/catDetail/catDetail?_id=' + this.data.cat._id,
       success: function (res) {
         // 转发成功
       },
@@ -102,7 +163,7 @@ Page({
     }
     return {
       title: this.data.cat.name,
-      path: '/pages/catDetail/catDetail?cat_id=' + this.data.cat._id,
+      path: '/pages/catDetail/catDetail?_id=' + this.data.cat._id,
       success: function (res) {
         // 转发成功
       },
@@ -111,40 +172,7 @@ Page({
       }
     }
   },
-  onPullDownRefresh: function () {
-    wx.stopPullDownRefresh()
-  },
-  copyBili: function (e) {
-    var self = this;
-    wx.setClipboardData({
-      data: this.data.cat.officialAccount['bili'],//需要复制的内容
-      success: function (res) {
-        console.log("复制成功")
-      }
-    })
-  },
-
-  naviToMini: function (e) {
-    wx.navigateToMiniProgram({
-      appId: this.data.cat.officialAccount['miniprogram'],
-      // path: 'pages/index/index',
-      envVersion: 'release',
-      success(res) {
-        // 打开成功
-      }
-    })
-  },
-  naviToMini1: function (e) {
-    wx.navigateToMiniProgram({
-      appId: this.data.cat.officialAccount['miniprogram1'],
-      // path: 'pages/index/index',
-      envVersion: 'release',
-      success(res) {
-        // 打开成功
-      }
-    })
-  }
 
 })
-
-
+//创建audio控件
+const myaudio = wx.createInnerAudioContext();

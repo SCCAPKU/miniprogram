@@ -1,30 +1,27 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
 
 .itemname1 {
   font-size: 27rpx;
   margin-left: 40rpx;
   margin-bottom: 30rpx;
   margin-top: 30rpx;
-  display:flex;
-  color:#888888;
+  display: flex;
+  color: #888888;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
+.divLineLong {
+  background: #eee;
+  height: 3rpx;
+  margin-left: 40rpx;
+}
+
 .itemname2 {
   font-size: 30rpx;
-  color:#353535;
-  font-weight:normal;
+  color: #353535;
+  font-weight: normal;
   margin-right: 40rpx;
   margin-bottom: 30rpx;
 }
@@ -41,19 +38,16 @@
   text-align: center;
   margin-top: 14rpx;
   margin-bottom: 14rpx;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .head1 {
   font-size: 35rpx;
   margin-left: 40rpx;
-  margin-right: 40rpx;
-  line-height:25rpx;
   margin-bottom: 20rpx;
-  margin-top: 40rpx;
-  font-weight:bold;
-  color:black;
-  text-align: left;
+  margin-top: 50rpx;
+  font-weight: bold;
+  color: black;
 }
 
 .body {
@@ -61,21 +55,29 @@
   margin-left: 40rpx;
   margin-right: 40rpx;
   margin-bottom: 30rpx;
-  margin-top: 14rpx;
-  color:#353535;
+  /* margin-top: 14rpx; */
+  color: #353535;
   letter-spacing: 5rpx;
-  line-height: 50rpx;
+  line-height: 55rpx;
   text-align: justify;
+  user-select: "true";
 }
 
-
+.circle {
+  height: 150rpx;
+  /* margin-top: 60rpx;
+  margin-bottom: 50rpx; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 
 .bodybold {
-  font-weight:bold;
+  font-weight: bold;
 }
 
 /* 会徽 */
-.board image{
+.board image {
   width: 100%;
   height: 300rpx;
   border-bottom: 1rpx solid #eee;
@@ -83,41 +85,50 @@
 
 
 /*每一只猫*/
-.catitem{
-  height: 100rpx;
+.catitem {
+  height: 105rpx;
+  /* margin-top: 30rpx; */
+  /* margin-bottom: 30rpx; */
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: space-between;
 }
 
 /*分割线样式*/
-.divLine{
- background: #eee;
- height: 3rpx;
- margin-left: 150rpx;
-}
-
-.divLine1{
+.divLine {
   background: #eee;
   height: 3rpx;
-  margin-left: 40rpx;
-  margin-right: 40rpx;
- }
-/*猫名称*/
-.cat-name{
-  font-size: 32rpx;
-  flex-direction:row;
   margin-left: 150rpx;
-  color:#353535;
+}
+
+/*猫名称*/
+.cat-name {
+  font-size: 32rpx;
+  flex-direction: row;
+  margin-left: 150rpx;
+  color: #353535;
   text-align: center;
 }
 
+.adoption {
+  font-size: 32rpx;
+  flex-direction: row;
+  /* margin-right: 50rpx; */
+  color: white;
+  justify-content: right;
+  text-align: right;
+  margin-right: 40rpx;
+  background-color : #94070a;
+  width:3em;
+}
+
 /*搜索框*/
+
 .search{
   font-size: 32rpx;
-  position: absolute;
   margin-left: 150rpx;
-  margin-top: 25rpx;
+  height: 32rpx;
 }
 
 .avator {
@@ -126,28 +137,29 @@
   margin-left: 40rpx;
   position: absolute;
   align-items: center;
-  display:flex;
+  display: flex;
 }
 
-.copy{
+.copy {
   color: #576b95;
+  font-weight: bold;
 }
 
-.play{
- width:45rpx;
- height: 45rpx;
- margin-right: 20rpx;
+.play {
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 20rpx;
 }
 
 .staff {
   font-size: 20rpx;
   margin-left: 40rpx;
   margin-right: 40rpx;
-  line-height:45rpx;
+  line-height: 45rpx;
   margin-bottom: 0rpx;
-  margin-top: -5rpx;
-  color:#888888;
-  text-align: right;
+  margin-top: -10rpx;
+  color: #888888;
+  text-align: left;
 }
 
 .cat_image {
@@ -157,14 +169,38 @@
 
 .cat-card {
   font-size: 45rpx;
-  color:black; 
-  font-weight:bold;
+  color: black;
+  font-weight: bold;
   justify-content: flex-start;
 }
 
 .sound {
   margin-top: 9rpx;
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.adContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.adContainer ad {
+  width: 100%;
+}
+
+.edit-input {
+  display: block;
+  height: 60rpx;
+  font-size: 35rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #DFDFDF;
+  color: #94070a;
+  /* width: 100%; */
+  margin-top: 10rpx;
 }

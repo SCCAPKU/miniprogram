@@ -1,8 +1,10 @@
 <!--index.wxml-->
 
-<image  class = 'avator ' src="/pages/images/huihui.png" mode='aspectFill' ></image>
-<view class="search">
-<input placeholder="请输入猫咪名称" bindconfirm="bindconfirmT" placeholder-class="placeholder" />
+<view class="circle">
+  <image lazy-load='true' bindtap="imageTap" class='avator' src="/pages/images/huihui.png" mode='aspectFill'></image>
+  <navigator class="circle" url="/pages/search/search">
+    <text class="search">点击搜索</text>
+  </navigator>
 </view>
 
 <view class="navbar">
@@ -12,136 +14,124 @@
 <!-- 在校 -->
 <view hidden="{{currentTab!==0}}">
 
+  <text> \n </text>
+  <navigator url="/pages/colors/colors?classification=玳瑁及三花">
+    <view class="catitem">
+      <image lazy-load='true' class='avator' src="/pages/images/山花.png" mode='aspectFill'></image>
+      <view class="cat-name">三花和玳瑁</view>
+    </view>
+  </navigator>
 
-<text> \n </text>
+  <view class="divLine"></view>
 
-<navigator url="/pages/index/玳瑁及三花/玳瑁及三花" >
-  <view class="catitem">
-    <image  class = 'avator ' src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/花灵灵.png" mode='aspectFill' ></image>
-    <view class="cat-name">三花和玳瑁</view> 
+  <navigator url="/pages/colors/colors?classification=橘猫及橘白">
+    <view class="catitem">
+      <image lazy-load='true' class='avator' src="/pages/images/黄小孙女.png" mode='aspectFill'></image>
+      <view class="cat-name">橘猫和橘白</view>
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+
+  <navigator url="/pages/colors/colors?classification=纯色">
+    <view class="catitem">
+      <image lazy-load='true' class='avator' src="/pages/images/薏米.png" mode='aspectFill'></image>
+      <view class="cat-name">纯色</view>
+    </view>
+  </navigator>
+
+
+  <view class="divLine"></view>
+
+  <navigator url="/pages/colors/colors?classification=奶牛">
+    <view class="catitem">
+      <image lazy-load='true' class='avator' src="/pages/images/英杰.png" mode='aspectFill'></image>
+      <view class="cat-name">奶牛</view>
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+
+  <navigator url="/pages/colors/colors?classification=狸花">
+    <view class="catitem">
+      <image lazy-load='true' class='avator' src="/pages/images/大狸.png" mode='aspectFill'></image>
+      <view class="cat-name">狸花</view>
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+
+  <navigator url="/pages/all/all">
+    <view class="catitem">
+      <image lazy-load='true' class='avator' src="/pages/images/huihui.png" mode='aspectFill'></image>
+      <view class="cat-name">所有</view>
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+
+  <text> \n </text>
+
+  <view class="body">
+    流浪猫客观上会对校内野生物种（主要是部分鸟类）产生负面影响。如果目击到流浪猫正在捕猎，我们鼓励同学们采取安全手段加以阻止。
   </view>
-</navigator>
 
-<view class="divLine"></view>
-
-<navigator url="/pages/index/橘猫及橘白/橘猫及橘白" >
-  <view class="catitem">
-    <image  class = 'avator ' src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/畅蠢.png" mode='aspectFill' ></image>
-    <view class= "cat-name">橘猫和橘白</view>
+  <view style="display: flex;margin-top:50rpx ;">
+    <view style="background-color: lightgray; width: 100%; height: 1rpx;"></view>
   </view>
-</navigator>
 
-<view class="divLine"></view>
-
-<navigator url="/pages/index/纯色/纯色" >
-  <view class="catitem">
-    <image  class = 'avator ' src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/薏米.png" mode='aspectFill' ></image>
-    <view class= "cat-name">纯色</view>
+  <view class="body">若您在校内偶遇流浪猫，<text class="bodybold">切记</text>人类的食物<text class="bodybold">不要</text>喂给流浪猫！
   </view>
-</navigator>
-
-
-<view class="divLine"></view>
-
-<navigator url="/pages/index/奶牛/奶牛" >
-  <view class="catitem">
-    <image  class = 'avator ' src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/英杰.png" mode='aspectFill' ></image>
-    <view class= "cat-name">奶牛</view>
+  <view class="body">
+    🚫<text class="bodybold">巧克力、葡萄制品、大葱、洋葱</text>等食品对猫<text class="bodybold">有毒</text>，可能会引起急性肾衰竭，切<text class="bodybold">不可以</text>喂食！
   </view>
-</navigator>
-
-<view class="divLine"></view>
-
-<navigator url="/pages/index/狸花/狸花" >
-  <view class="catitem">
-    <image  class = 'avator ' src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/山竹.png" mode='aspectFill' ></image>
-    <view class= "cat-name">狸花</view>
+  <view class="body">
+    🚫<text class="bodybold">火腿肠</text>和<text class="bodybold">牛奶</text>也并<text class="bodybold">不适合</text>猫咪，会引起肠胃反应，造成腹泻等状况。
   </view>
-</navigator>
-
-<view class="divLine"></view>
-
-<navigator url="/pages/index/所有/所有" >
-  <view class="catitem">
-    <image  class = 'avator ' src="/pages/images/huihui.png" mode='aspectFill' ></image>
-    <view class= "cat-name">所有</view>
+  <view class="body">
+    🚫酸性的各类水果、香辛料制的肉类、乌贼等海产也<text class="bodybold">均不适合</text>猫咪食用。
   </view>
-</navigator>
+  <view class="body">
+    猫常见的较合适的食物有猫粮、猫罐头、以及其它一些猫咪零食。
+  </view>
 
-<view class="divLine"></view>
-
-<text> \n </text>
-
-<view class = "body">流浪猫属于入侵物种，客观上对校内生态存在负面影响。如果目击到流浪猫正在捕猎，我们鼓励同学们采取安全手段加以阻止。
-</view>
-
-<view class="divLine1"></view>
-
-<text> \n </text>
-
-<view class = "body">若您在校内偶遇流浪猫，<text class = "bodybold">切记</text>人类的食物<text class = "bodybold">不要</text>喂给流浪猫！
-</view>
-<view class = "body">
-🚫<text class = "bodybold">巧克力、葡萄制品、大葱、洋葱</text>等食品对猫<text class = "bodybold">有毒</text>，可能会引起急性肾衰竭，切<text class = "bodybold">不可以</text>喂食！
-</view>
-<view class = "body">
-🚫<text class = "bodybold">火腿肠</text>和<text class = "bodybold">牛奶</text>也并<text class = "bodybold">不适合</text>猫咪，会引起肠胃反应，造成腹泻等状况。
-</view>
-<view class = "body">
-🚫酸性的各类水果、香辛料制的肉类、乌贼等海产也<text class = "bodybold">均不适合</text>猫咪食用。
-</view>
-<view class = "body">
-猫常见的较合适的食物有猫粮、猫罐头、以及其它一些猫咪零食。
-</view>
 
 </view>
- 
+
 <!-- 毕业 -->
 
 <text> \n </text>
 
 <view hidden="{{currentTab!==1}}">
-  <block wx:for="{{fostered_catlist}}">
-  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
-    <view class="catitem">
-      <image  class = 'avator ' lazy-load src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/{{item.name}}.png" mode='aspectFill' ></image>
-      <view class= "cat-name">{{item.name}}</view> 
+  <navigator block wx:for="{{fostered_cat}}" wx:key="_id" url="/pages/catDetail/catDetail?_id={{item._id}}">
+    <view bindlongpress='editCat' data-_id="{{item._id}}" class="catitem">
+      <image lazy-load='true' class='avator' src="{{url}}{{item.name}}_circle.png" mode='aspectFill'></image>
+      <view class="cat-name">{{item.name}}</view>
     </view>
+    <view class="divLine"></view>
   </navigator>
-
-  <view class="divLine"></view>
-  
-</block>
 </view>
 
 <!-- 休学 -->
 
 <view hidden="{{currentTab!==2}}">
-    <block wx:for="{{unknown_catlist}}">
-  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
-    <view class="catitem">
-      <image  class = 'avator ' lazy-load src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/{{item.name}}.png" mode='aspectFill' ></image>
-      <view class= "cat-name">{{item.name}}</view> 
+  <navigator block wx:for="{{unknown_cat}}" wx:key="_id" url="/pages/catDetail/catDetail?_id={{item._id}}">
+    <view bindlongpress='editCat' data-_id="{{item._id}}" class="catitem">
+      <image lazy-load='true' class='avator' src="{{url}}{{item.name}}_circle.png" mode='aspectFill'></image>
+      <view class="cat-name">{{item.name}}</view>
     </view>
+    <view class="divLine"></view>
   </navigator>
-
-  <view class="divLine"></view>
-  
-</block>
 </view>
 
 <!-- 喵星 -->
 
 <view hidden="{{currentTab!==3}}">
-    <block wx:for="{{dead_catlist}}">
-  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
-    <view class="catitem">
-      <image  class = 'avator ' lazy-load src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/{{item.name}}.png" mode='aspectFill' ></image>
-      <view class= "cat-name">{{item.name}}</view> 
+  <navigator block wx:for="{{dead_cat}}" wx:key="_id" url="/pages/catDetail/catDetail?_id={{item._id}}">
+    <view bindlongpress='editCat' data-_id="{{item._id}}" class="catitem">
+      <image lazy-load='true' class='avator' src="{{url}}{{item.name}}_circle.png" mode='aspectFill'></image>
+      <view class="cat-name">{{item.name}}</view>
     </view>
+    <view class="divLine"></view>
   </navigator>
-
-  <view class="divLine"></view>
-  
-</block>
 </view>

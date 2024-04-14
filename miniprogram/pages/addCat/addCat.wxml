@@ -1,0 +1,168 @@
+<view class="head1">
+  <text user-select="true">名字</text>
+</view>
+<input data-key='name' bindinput="inputText" class="edit-input" value="{{cat.name}}" />
+
+<view class="head1">
+  <text user-select="true">昵称</text>
+</view>
+<input data-key='nickName' bindinput="inputText" class="edit-input" value="{{cat.nickName}}" />
+
+<view class="head1">
+  <text user-select="true">外貌</text>
+</view>
+<input data-key='appearance' bindinput="inputText" class="edit-input" value="{{cat.appearance}}" />
+
+<view class="head1">
+  <text user-select="true">毛色分类</text>
+</view>
+<picker mode="selector" data-key='classification' bindchange="bindPickerChange" range="{{pickers.classification}}" value='{{picker_selected.classification}}'>
+  <view class="edit-input">
+    {{cat.classification}}
+  </view>
+</picker>
+
+<view class="head1">
+  <text user-select="true">毛色</text>
+</view>
+<input data-key='furColor' bindinput="inputText" class="edit-input" value="{{cat.furColor}}" />
+
+<view class="head1">
+  <text user-select="true">性别</text>
+</view>
+<picker mode="selector" data-key='gender' bindchange="bindPickerChange" range="{{pickers.gender}}" value='{{picker_selected.gender}}'>
+  <view class="edit-input">
+    {{cat.gender}}
+  </view>
+</picker>
+
+<view class="head1">
+  <text user-select="true">是否寻找领养</text>
+</view>
+<picker mode="selector" data-key='isAdoption' bindchange="bindPickerChange" range="{{pickers.isAdoption}}" value='{{picker_selected.isAdoption}}'>
+  <view class="edit-input">
+    {{cat.isAdoption}}
+  </view>
+</picker>
+
+<view class="head1">
+  <text user-select="true">下方加图片数</text>
+</view>
+<picker mode="selector" data-key='addPhotoNumber' bindchange="bindPickerChange" range="{{pickers.addPhotoNumber}}" value='{{picker_selected.addPhotoNumber}}'>
+  <view class="edit-input">
+    {{cat.addPhotoNumber}}
+  </view>
+</picker>
+
+<view class="head1">
+  <text user-select="true">加音频数</text>
+</view>
+<picker mode="selector" data-key='addAudioNumber' bindchange="bindPickerChange" range="{{pickers.addAudioNumber}}" value='{{picker_selected.addAudioNumber}}'>
+  <view class="edit-input">
+    {{cat.addAudioNumber}}
+  </view>
+</picker>
+
+<view class="head1">
+  <text user-select="true">状况</text>
+</view>
+<picker mode="selector" data-key='status' bindchange="bindPickerChange" range="{{pickers.status}}">
+  <view class="edit-input">
+    {{cat.status}}
+  </view>
+</picker>
+
+<view class="head1">
+  <text user-select="true">绝育情况</text>
+</view>
+<picker mode="selector" data-key='isSterilization' bindchange="bindPickerChange" range="{{pickers.isSterilization}}" value='{{picker_selected.isSterilization}}'>
+  <view class="edit-input">
+    {{cat.isSterilization}}
+  </view>
+</picker>
+
+<view class="head1">
+  <text user-select="true">绝育时间</text>
+</view>
+<input data-key='sterilizationTime' bindinput="inputText" class="edit-input" value="{{cat.sterilizationTime}}" />
+
+
+<view class="head1">
+  <text user-select="true">出没地点</text>
+</view>
+<input data-key='location' bindinput="inputText" class="edit-input" value="{{cat.location}}" />
+
+<view class="head1">
+  <text user-select="true">出生时间</text>
+</view>
+<input data-key='birthTime' bindinput="inputText" class="edit-input" value="{{cat.birthTime}}" />
+
+<view class="head1">
+  <text user-select="true">性格</text>
+</view>
+<picker mode="selector" data-key='character' bindchange="bindPickerChange" range="{{pickers.character}}" value='{{picker_selected.character}}'>
+  <view class="edit-input">
+    {{cat.character}}
+  </view>
+</picker>
+
+<view class="head1">
+  <text user-select="true">第一次目击时间</text>
+</view>
+<input data-key='firstSightingTime' bindinput="inputText" class="edit-input" value="{{cat.firstSightingTime}}" />
+
+<view class="head1">
+  <text user-select="true">失踪时间</text>
+</view>
+<input data-key='missingTime' bindinput="inputText" class="edit-input" value="{{cat.missingTime}}" />
+
+<view class="head1">
+  <text user-select="true">送养时间</text>
+</view>
+<picker mode="date" fields="month" data-key='deliveryTime' bindchange="bindDateChange" value='{{cat.deliveryTime}}'>
+  <view class="edit-input">
+    {{cat.deliveryTime}}
+  </view>
+</picker>
+
+<view class="head1">
+  <text user-select="true">离世时间</text>
+</view>
+<picker mode="date" fields="month" data-key='deathTime' bindchange="bindDateChange" value='{{cat.deathTime}}'>
+  <view class="edit-input">
+    {{cat.deathTime}}
+  </view>
+</picker>
+
+<view class="head1">
+  <text user-select="true">离世原因</text>
+</view>
+<input data-key='deathReason' bindinput="inputText" class="edit-input" value="{{cat.deathReason}}" />
+
+<view class="head1">
+  <text user-select="true">更多</text>
+</view>
+<input data-key='moreInformation' bindinput="inputText" class="edit-input" value="{{cat.moreInformation}}" />
+
+<view class="head1">
+  <text user-select="true">备注</text>
+</view>
+<input data-key='notes' bindinput="inputText" class="edit-input" value="{{cat.notes}}" />
+
+<view class="head1">
+  <text user-select="true">关系</text>
+</view>
+<input data-key='relationship' bindinput="inputText" class="edit-input" value="{{cat.relationship}}" />
+
+<view class="head1">
+  <text user-select="true">相关的猫，用一个空格隔开</text>
+</view>
+<input data-key='relatedCats' bindinput="inputText" class="edit-input" value="{{cat.relatedCats}}" />
+
+<!-- </view> -->
+
+<text> \n </text>
+
+<button class='primary' bindtap='upload' style="margin: 0;">确定提交</button>
+
+<text> \n </text>

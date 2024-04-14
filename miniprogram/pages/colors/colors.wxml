@@ -1,0 +1,8 @@
+<navigator block wx:for="{{cat}}" wx:key="_id" url="/pages/catDetail/catDetail?_id={{item._id}}">
+  <view bindlongpress='editCat' data-_id="{{item._id}}" class="catitem">
+    <image lazy-load='true' class='avator' src="{{url}}{{item.name}}_circle.png" mode='aspectFill'></image>
+    <view class="cat-name">{{item.name}}</view>
+    <view class="adoption">{{item.isAdoption}}</view>
+  </view>
+  <view class="divLine"></view>
+</navigator>

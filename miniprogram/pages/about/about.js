@@ -54,16 +54,15 @@ Page({
   copy2: function (e) {
     var self = this;
     wx.setClipboardData({
-      data: 'https://github.com/SCCAPKU/miniprogram',//需要复制的内容
+      data: 'https://gitee.com/circlelq/yan-yuan-mao-su-cha-shou-ce',//需要复制的内容
       success: function (res) {
         // self.setData({copyTip:true}),
-       
       }
     })
     },
     codeimgdata: {
-      images:"cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/二维码.jpg",
-      imgList:["cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/二维码.jpg"]
+      images:"https://pku-lostangel.oss-cn-beijing.aliyuncs.com/二维码.jpg",
+      imgList:["https://pku-lostangel.oss-cn-beijing.aliyuncs.com/二维码.jpg"]
     },
     previewImg:function(e){
       console.log(1);

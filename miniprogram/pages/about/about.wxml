@@ -31,7 +31,7 @@
 <view class="head1">联系我们</view>
 
 <view style="display:flex; justify-content:center; align-items:center;" bindtap="previewImg">
-  <image mode="widthFix" src="cloud://sccapku-2b02q.7363-sccapku-2b02q-1301706491/catPhotos/二维码.jpg" style= "width: 93%;">
+  <image mode="widthFix" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/二维码.jpg" style= "width: 93%;">
   </image>
 </view>
 
@@ -40,7 +40,7 @@
 </view>
 
 <view class="body">
-此代码使用 MIT License ，大家可以随意使用（但不包括小程序里的猫咪照片和文字内容，如要使用，请联系北大猫协）。<text bindtap="copy2" class="copy">点击</text>复制 GitHub 仓库链接后请在浏览器中粘贴打开，GitHub 有详细的教程，还配有完整的教学视频，完全不会代码的同学也能学会使用。
+此代码使用 MIT License ，大家可以随意使用（但不包括小程序里的猫咪照片和文字内容，如要使用，请联系北大猫协）。<text bindtap="copy2" class="copy">点击</text>复制 gitee 仓库链接后请在浏览器中粘贴打开，gitee 有详细的教程，还配有完整的教学视频，完全不会代码的同学也能学会使用。
 </view>
 
 <!-- <text bindtap="saveImage" class="copy">北大猫协</text> -->
@@ -54,8 +54,6 @@
 </view> -->
 
 <text> \n </text>
-
-<view class="staff">2022-04-22</view>
 
 <view class="staff">
 小程序开发：circle

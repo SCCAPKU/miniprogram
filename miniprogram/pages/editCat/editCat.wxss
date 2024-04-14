@@ -1,0 +1,15 @@
+/*搜索框*/
+.cancel-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.cancel {
+  font-size: 35rpx;
+  margin-top: 50rpx;
+  margin-right: 40rpx;
+  font-weight: bold;
+  color: black;
+}

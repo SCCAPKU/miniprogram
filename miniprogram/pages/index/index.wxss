@@ -4,10 +4,12 @@ page{
   height: 100%;
 }
 .navbar{
-  flex: none;
+  /* position: relative; */
+  line-height: 80rpx;
+  /* flex: none; */
+  top: 100rpx;
   display: flex;
   background: #fff;
-  margin-top: 100rpx;
 }
 .navbar .item{
   position: relative;
@@ -24,7 +26,7 @@ page{
   content: "";
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: 0rpx;
   left: 40rpx;
   right: 40rpx;
   height: 4rpx;
@@ -34,4 +36,13 @@ page{
 .placeholder {
   color: #888888;
   caret-color: #94070a;
+}
+
+.search {
+  font-size: 32rpx;
+  margin-left: 150rpx;
+  height: 150rpx;
+  color: #888888;
+  align-items: center;
+  display: flex;
 }

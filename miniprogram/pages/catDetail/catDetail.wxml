@@ -1,74 +1,191 @@
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" class="cat_image" src="{{url}}{{catname}}.jpg" style="width: 90%;">
+  <image mode="widthFix" bindtap='previewImage' class="cat_image" data-src="{{url}}{{cat.name}}.jpg" src="{{url}}{{cat.name}}.jpg" style="width: 90%;">
   </image>
 </view>
 
-
 <view class="itemname1">
   <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
-    <view class="cat-card">{{catname}}</view>
+    <view class="cat-card">{{cat.name}}</view>
   </view>
   <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
     <!-- 猫叫声 -->
     <view class="sound">
       <block wx:for="{{audioArr}}" wx:key="content" wx:for-item="v" wx:for-index="key">
-
         <!-- 默认状态 未播放 -->
         <view wx:if="{{!v.bl}}" bindtap='audioPlay' data-key="{{key}}" data-id="{{v.id}}" data-bl="{{v.bl}}">
           <image class="play" src="/pages/images/play.png"></image>
         </view>
-
         <!-- 当前正在播放状态 -->
         <view wx:if="{{v.bl}}" bindtap='audioStop' data-key="{{key}}" data-id="{{v.id}}" data-bl="{{v.bl}}">
           <image class="play" src="/pages/images/pause.png"></image>
         </view>
-
       </block>
     </view>
   </view>
 </view>
 
-
 <view class="itemname1">
-  <view wx:for="{{catitems}}">
+  <view wx:if="{{cat.nickName}}" class="flex-wrp" style="flex-direction:column;">
     <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
-      {{item.category}}
+      <text user-select="true">昵称</text>
     </view>
-    <view class="itemname2">{{item.content}}</view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.nickName}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.furColor}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">毛色</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.furColor}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.gender}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">性别</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.gender}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.status}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">状况</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.status}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.isSterilization}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">绝育情况</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.isSterilization}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.sterilizationTime}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">绝育时间</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.sterilizationTime}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.birthTime}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">出生时间</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.birthTime}}</text>
+    </view>
+  </view>
+  <!-- <view wx:if="{{cat.location}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">出没地点</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.location}}</text>
+    </view>
+  </view> -->
+  <view wx:if="{{cat.character}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">性格</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.character}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.firstSightingTime}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">第一次目击时间</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.firstSightingTime}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.missingTime}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">失踪时间</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.missingTime}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.deliveryTime}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">送养时间</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.deliveryTime}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.deathTime}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">离世时间</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.deathTime}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.deathReason}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">离世原因</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.deathReason}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.appearance}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">外貌</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.appearance}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.moreInformation}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">更多</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.moreInformation}}</text>
+    </view>
+  </view>
+  <view wx:if="{{cat.relationship}}" class="flex-wrp" style="flex-direction:column;">
+    <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+      <text user-select="true">关系</text>
+    </view>
+    <view class="itemname2">
+      <text user-select="true">{{cat.relationship}}</text>
+    </view>
   </view>
 </view>
 
-<view wx:if="{{relationship[0]}}" class="itemname1">
-  <navigator wx:for="{{relationship}}" url="/pages/cats/{{item.rela}}/{{item.rela}}">
-    <view style='flex-shrink:0; box-sizing:border-box; width:3rem; margin-right:1rem;'>
-      <image style="width:3rem;height:3rem;" src="{{url}}{{item.rela}}.png"></image>
-      <view style="text-align: center;  color:#353535;"> \n {{item.rela}} </view>
+<view wx:if="{{relatedCatsId}}" class="itemname1">
+  <navigator style='margin-right:20rpx;' wx:for="{{relatedCatsId}}" wx:key="_id" url="/pages/catDetail/catDetail?_id={{relatedCatsId[index]._id}}">
+    <view style='flex-shrink:0; box-sizing:border-box; width:90rpx;'>
+      <image style="width:90rpx;height:90rpx;" src="{{url}}{{relatedCatsId[index].name}}_circle.png"></image>
+      <view style="text-align: center;  color:#353535;"> \n {{relatedCatsId[index].name}} </view>
     </view>
   </navigator>
 </view>
 
-
-
 <text> \n </text>
 
-<block wx:for="{{nums}}">
-
+<block wx:for="{{photoArray}}" wx:key="_id">
   <view style="display:flex; justify-content:center; align-items:center;">
-    <image mode="widthFix" class="cat_image" src="{{url}}{{catname}}{{item.num}}.jpg" style="width: 90%;">
+    <image mode="widthFix" class="cat_image" bindtap='previewImage' src="{{url}}{{cat.name}}{{photoArray[index]}}.jpg" data-src="{{url}}{{cat.name}}{{photoArray[index]}}.jpg"  style="width: 90%;">
     </image>
   </view>
-
   <text> \n </text>
-
 </block>
 
-<block wx:for="{{MovieNums}}">
-
+<block wx:for="{{MovieNums}}" wx:key="_id">
   <view style="display:flex; justify-content:center; align-items:center;">
-    <video mode="widthFix" class="cat_image" src="{{url}}{{catname}}{{item.num}}.mp4" style="width: 90%;">
+    <video mode="widthFix" class="cat_image" src="{{url}}{{cat.name}}{{item.num}}.mp4" style="width: 90%;">
     </video>
   </view>
-
   <text> \n </text>
-
 </block>

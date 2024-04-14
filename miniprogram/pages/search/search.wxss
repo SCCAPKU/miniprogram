@@ -3,7 +3,7 @@
   font-size: 32rpx;
   margin-left: 50rpx;
   height: 32rpx;
-  color: #557e56;
+  /* color: #94070a; */
 }
 
 .container {

@@ -159,7 +159,7 @@
   margin-bottom: 0rpx;
   margin-top: -10rpx;
   color: #888888;
-  text-align: left;
+  text-align: right;
 }
 
 .cat_image {

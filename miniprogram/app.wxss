@@ -26,7 +26,6 @@
   margin-bottom: 30rpx;
 }
 
-
 .content {
   display: flex;
   flex-direction: column;
@@ -119,13 +118,13 @@
   justify-content: right;
   text-align: right;
   margin-right: 40rpx;
-  background-color : #94070a;
-  width:3em;
+  background-color: #94070a;
+  width: 3em;
 }
 
 /*搜索框*/
 
-.search{
+.search {
   font-size: 32rpx;
   margin-left: 150rpx;
   height: 32rpx;

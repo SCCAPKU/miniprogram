@@ -43,16 +43,6 @@
   此代码使用 MIT License ，大家可以随意使用（但不包括小程序里的猫咪照片和文字内容，如要使用，请联系北大猫协）。<text bindtap="copy2" class="copy">点击</text>复制 gitee 仓库链接后请在浏览器中粘贴打开，gitee 有详细的教程，还配有完整的教学视频，完全不会代码的同学也能学会使用。
 </view>
 
-<!-- <text bindtap="saveImage" class="copy">北大猫协</text> -->
-
-
-
-<!-- <view class="body">
-<navigator url="/pages/donate/donate" >
-<text class="copy">打赏链接</text>
-</navigator>
-</view> -->
-
 <text> \n </text>
 
 <view class="staff">
@@ -67,9 +57,7 @@
 </view>
 
 <view class="staff">
-  v2.0.0
+  v2.0.1
 </view>
 
 <text> \n </text>
-
-<!-- <button open-type='feedback' type='primary'>意见反馈</button> -->

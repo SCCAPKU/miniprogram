@@ -166,8 +166,8 @@
 <view wx:if="{{relatedCatsId}}" class="itemname1">
   <navigator style='margin-right:20rpx;' wx:for="{{relatedCatsId}}" wx:key="_id" url="/pages/catDetail/catDetail?_id={{relatedCatsId[index]._id}}">
     <view style='flex-shrink:0; box-sizing:border-box; width:90rpx;'>
-      <image style="width:90rpx;height:90rpx;" src="{{url}}{{relatedCatsId[index].name}}_circle.png"></image>
-      <view style="text-align: center;  color:#353535;"> \n {{relatedCatsId[index].name}} </view>
+      <image style="margin-top: 10rpx; width:90rpx;height:90rpx;" src="{{url}}{{relatedCatsId[index].name}}_circle.png"></image>
+      <view style="text-align: center; margin-bottom: 40rpx; color:#353535;"> \n {{relatedCatsId[index].name}} </view>
     </view>
   </navigator>
 </view>

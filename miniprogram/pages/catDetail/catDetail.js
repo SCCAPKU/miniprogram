@@ -175,4 +175,6 @@ Page({
 
 })
 //创建audio控件
-const myaudio = wx.createInnerAudioContext();
+const myaudio = wx.createInnerAudioContext({
+  useWebAudioImplement: true
+});

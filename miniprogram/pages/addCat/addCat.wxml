@@ -57,9 +57,9 @@
 <view class="head1">
   <text user-select="true">加音频数</text>
 </view>
-<picker mode="selector" data-key='addAudioNumber' bindchange="bindPickerChange" range="{{pickers.addAudioNumber}}" value='{{picker_selected.addAudioNumber}}'>
+<picker mode="selector" data-key='audioNumber' bindchange="bindPickerChange" range="{{pickers.audioNumber}}" value='{{picker_selected.audioNumber}}'>
   <view class="edit-input">
-    {{cat.addAudioNumber}}
+    {{cat.audioNumber}}
   </view>
 </picker>
 
